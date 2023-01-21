@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id "androidx.navigation.safeargs"
+}
+
+android {
+    namespace 'com.example.android.myapplication'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.android.myapplication"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+
+    implementation 'com.google.android.material:material:1.7.0'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation platform('com.google.firebase.firebase-perf:com.google.firebase.firebase-perf.gradle.plugin:1.4.2')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Android KTX
+    implementation 'androidx.core:core-ktx:1.9.0'
+
+    //library
+    implementation "androidx.fragment:fragment:1.5.5"
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+
+
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+
+
+    //Room and Lifecycle dependencies
+    implementation "androidx.room:room-ktx:2.4.3"
+    implementation "androidx.room:room-runtime:2.4.3"
+    kapt "androidx.room:room-compiler:2.4.3"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+
+    // Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
+}

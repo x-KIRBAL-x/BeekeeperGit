@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Beekeeper</string>
+    <string name="one">Very bad</string>
+    <string name="two">Bad</string>
+    <string name="three">Medium</string>
+    <string name="four">Good</string>
+    <string name="five">Very good</string>
+    <string name="one_quantity">Few</string>
+    <string name="two_quantity">Enough</string>
+    <string name="three_quantity">Much</string>
+</resources>

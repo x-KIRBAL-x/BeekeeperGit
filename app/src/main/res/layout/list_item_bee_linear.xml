@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/beehive_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/beehive_item_img"
+        tools:text="Beehive name" />
+
+    <TextView
+        android:id="@+id/beehive_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/beehive_item_name"
+        app:layout_constraintStart_toStartOf="@id/beehive_item_name"
+        app:layout_constraintTop_toBottomOf="@id/beehive_item_name"
+        tools:text="Beehive text" />
+
+    <ImageView
+        android:id="@+id/beehive_item_img"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/beehive_item_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/hive"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

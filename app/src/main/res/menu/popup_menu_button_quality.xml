@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/popUpMenuQuality_One"
+        android:title="@string/one"/>
+    <item
+        android:id="@+id/popUpMenuQuality_Two"
+        android:title="@string/two"/>
+    <item
+        android:id="@+id/popUpMenuQuality_Three"
+        android:title="@string/three" />
+    <item
+        android:id="@+id/popUpMenuQuality_Four"
+        android:title="@string/four" />
+    <item
+        android:id="@+id/popUpMenuQuality_Five"
+        android:title="@string/five" />
+</menu>

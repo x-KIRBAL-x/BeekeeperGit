@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="beeGroupsViewModel"
+            type="com.example.android.myapplication.beegroups.BeeGroupsViewModel" />
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".beegroups.BeeGroupsFragment">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/beegroups_list"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/close"
+    app:layout_constraintTop_toBottomOf="@id/add_new_group"
+    app:layout_constraintEnd_toEndOf="parent"
+    />
+<Button
+    android:id="@+id/add_new_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    android:text="New Group"
+    app:layout_constraintBottom_toTopOf="@id/beegroups_list"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:onClick="@{() -> beeGroupsViewModel.clickAddNewGroup()}"
+    />
+    <Button
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/beegroups_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="@{() -> beeGroupsViewModel.clickClose()}"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

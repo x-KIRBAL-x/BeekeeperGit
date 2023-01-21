@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="beehive"
+            type="com.example.android.myapplication.database.Beehive"/>
+        <variable
+            name="clickListener"
+            type="com.example.android.myapplication.queenbeemanagement.QueenBeeManagementListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(beehive)}">
+
+        <TextView
+            android:id="@+id/beehive_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="130dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/beehive_item_img"
+            app:QueenBeeName="@{beehive}"/>
+
+        <TextView
+            android:id="@+id/queenbee_condition"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="130dp"
+            app:layout_constraintEnd_toEndOf="@id/beehive_item_name"
+            app:layout_constraintStart_toStartOf="@id/beehive_item_name"
+            app:layout_constraintTop_toBottomOf="@id/beehive_item_name"
+            app:QueenBeeAgeManagement="@{beehive}"/>
+
+        <TextView
+            android:id="@+id/queenbee_age_number"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="130dp"
+            app:layout_constraintStart_toStartOf="@id/queenbee_condition"
+            app:layout_constraintEnd_toEndOf="@id/queenbee_condition"
+            app:layout_constraintTop_toBottomOf="@id/queenbee_condition"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:QueenBeeConditionManagement="@{beehive}"/>
+
+        <ImageView
+            android:id="@+id/beehive_item_img"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/beehive_item_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:QueenBeehiveImage="@{beehive}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
