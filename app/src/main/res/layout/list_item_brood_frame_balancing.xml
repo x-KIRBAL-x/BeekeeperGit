@@ -24,9 +24,9 @@
             android:layout_height="20dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="130dp"
+            app:BeehiveBalanceName="@{beehive}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/beehive_item_img"
-            app:BeehiveBalanceName="@{beehive}"/>
+            app:layout_constraintTop_toTopOf="@+id/beehive_item_img" />
 
         <TextView
             android:id="@+id/beehive_item_text"
@@ -34,10 +34,11 @@
             android:layout_height="20dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="130dp"
+            app:BeehiveBroodFrameNumber="@{beehive}"
             app:layout_constraintEnd_toEndOf="@id/beehive_item_name"
             app:layout_constraintStart_toStartOf="@id/beehive_item_name"
-            app:layout_constraintTop_toBottomOf="@id/beehive_item_name"
-            app:BeehiveBroodFrameNumber="@{beehive}"/>
+            app:layout_constraintTop_toBottomOf="@id/beehive_item_name" />
 
         <ImageView
             android:id="@+id/beehive_item_img"
@@ -46,11 +47,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            app:BeehiveBalanceImage="@{beehive}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/beehive_item_name"
-            app:layout_constraintTop_toTopOf="parent"
-            app:BeehiveBalanceImage="@{beehive}"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

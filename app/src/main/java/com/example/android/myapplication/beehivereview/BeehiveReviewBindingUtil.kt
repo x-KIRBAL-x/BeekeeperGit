@@ -71,23 +71,13 @@ fun TextView.setHoneyframeNumber(item: Beehive?){
 @BindingAdapter("Nosema")
 fun Switch.setNosemaValue(item: Beehive?){
     item?.let {
-        if (item.noszema==1){
-            isChecked=true
-        }
-        else{
-            isChecked=false
-        }
+        isChecked = item.noszema==1
     }
 }
 
 @BindingAdapter("Meszes")
 fun Switch.setMeszesValue(item: Beehive?){
     item?.let {
-        if (item.meszesedes == 1){
-            isChecked=true
-        }
-        else{
-            isChecked=false
-        }
+        isChecked = item.meszesedes==10
     }
 }

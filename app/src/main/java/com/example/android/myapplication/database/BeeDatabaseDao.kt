@@ -59,4 +59,7 @@ interface BeeDatabaseDao {
 
     @Query("SELECT * FROM bee_group_table WHERE NOT group_nev = '' ORDER BY groupId DESC")
     fun getAllGroups(): LiveData<List<BeeGroup>>
+
+    @Query("SELECT * FROM beehive_table WHERE noszema=1 OR meszesedes=10")
+    fun getAllSickBeehives(): LiveData<List<Beehive>>
 }

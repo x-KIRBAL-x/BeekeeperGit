@@ -3,6 +3,7 @@ package com.example.android.myapplication.database
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.Date
 
 @Entity(tableName = "beehive_table")
 data class Beehive(

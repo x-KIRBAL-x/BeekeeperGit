@@ -52,7 +52,7 @@ class AddNewBeehiveFragment : Fragment(){
                     addNewBeehiveViewModel.donenavigating()
                     }
                     else{
-                        Toast.makeText(application, "The year isn't correct!",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(application, "          The year isn't correct!\n(max. of 5 from the current year)",Toast.LENGTH_SHORT).show()
                     }
                 }
                 else{

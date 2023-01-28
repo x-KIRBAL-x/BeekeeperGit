@@ -15,73 +15,117 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/Select_manage"
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:id="@+id/manage_scrollview"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select Manage"
-            app:layout_constraintTop_toTopOf="parent
-"
-            app:layout_constraintBottom_toTopOf="@id/manage_qeenbee"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-
-        <Button
-            android:id="@+id/manage_qeenbee"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:text="QueenBee"
-            android:onClick="@{() -> beeManagementViewModel.clickOnQueenBeeManagementButton()}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/kiegyenlites_fias"
-            app:layout_constraintTop_toBottomOf="@id/Select_manage"
-            app:layout_constraintBottom_toTopOf="@id/kiegyenlites_mez"/>
-
-
-        <Button
-            android:id="@+id/kiegyenlites_fias"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:text="brood \n frame \n balancing"
-            android:onClick="@{() -> beeManagementViewModel.clickOnBroodFrameBalancingButton()}"
-            app:layout_constraintStart_toEndOf="@id/manage_qeenbee"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Select_manage"
-            app:layout_constraintBottom_toTopOf="@id/stat"/>
-
-        <Button
-            android:id="@+id/kiegyenlites_mez"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:text="Honey \n frame \n balancing"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/stat"
-            app:layout_constraintTop_toBottomOf="@id/manage_qeenbee"
-            app:layout_constraintBottom_toTopOf="@id/close"/>
-
-        <Button
-            android:id="@+id/stat"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:text="Stat"
-            app:layout_constraintStart_toEndOf="@id/kiegyenlites_mez"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/kiegyenlites_fias"
-            app:layout_constraintBottom_toBottomOf="@id/close"/>
-
-        <Button
-            android:id="@+id/close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Close"
-            android:onClick="@{() -> beeManagementViewModel.clickOnCloseButton()}"
-            app:layout_constraintTop_toBottomOf="@id/stat"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent">
 
 
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/Option_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/close_linear_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/manage_qeenbee"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:onClick="@{() -> beeManagementViewModel.clickOnQueenBeeManagementButton()}"
+                            android:text="QueenBee"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/kiegyenlites_fias"
+                            app:layout_constraintBottom_toTopOf="@id/kiegyenlites_mez"/>
+
+                        <Button
+                            android:id="@+id/kiegyenlites_fias"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:onClick="@{() -> beeManagementViewModel.clickOnBroodFrameBalancingButton()}"
+                            android:text="brood \n frame \n balancing"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/manage_qeenbee"
+                            app:layout_constraintBottom_toTopOf="@id/stat"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <Button
+                            android:id="@+id/kiegyenlites_mez"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:text="Honey \n frame \n balancing"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/manage_qeenbee"
+                            app:layout_constraintEnd_toStartOf="@id/stat"
+                            app:layout_constraintBottom_toTopOf="@id/issues"/>
+
+                        <Button
+                            android:id="@+id/stat"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:text="Stat"
+                            app:layout_constraintTop_toBottomOf="@id/kiegyenlites_fias"
+                            app:layout_constraintStart_toEndOf="@id/kiegyenlites_mez"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/issues"/>
+
+                        <Button
+                            android:id="@+id/issues"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:text="Sick \n beehives"
+                            app:layout_constraintTop_toBottomOf="@id/kiegyenlites_mez"
+                            app:layout_constraintStart_toStartOf="@id/kiegyenlites_mez"
+                            app:layout_constraintEnd_toEndOf="@id/kiegyenlites_mez"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/close_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="80dp"
+                    android:paddingBottom="60dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Option_linear_layout"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                <Button
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> beeManagementViewModel.clickOnCloseButton()}"
+                    android:text="Close" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -23,3 +23,13 @@ fun convertNumericQuantityToString(quantity: Int, resources: Resources): String{
     }
     return quantityString
 }
+
+fun convertNumericDiseasesToString(diseases: Int, resources: Resources): String{
+    var diseasesString = ""
+    when (diseases){
+        1 -> diseasesString = "NOSEMA"
+        10 -> diseasesString = "MESZES"
+        11-> diseasesString = "NOSEMA AND MESZES"
+    }
+    return diseasesString
+}

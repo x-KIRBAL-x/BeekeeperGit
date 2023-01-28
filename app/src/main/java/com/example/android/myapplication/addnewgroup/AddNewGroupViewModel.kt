@@ -36,7 +36,7 @@ class AddNewGroupViewModel(dataSource: BeeDatabaseDao,
 
     fun setvalue(nev: String, hely: String){
         viewModelScope.launch {
-            val newgroup =   database.getgroup(groupKey)          // group.value ?: return@launch
+            val newgroup = database.getgroup(groupKey)
             newgroup.groupNev = nev
             newgroup.groupHely = hely
             database.updateGroup(newgroup)

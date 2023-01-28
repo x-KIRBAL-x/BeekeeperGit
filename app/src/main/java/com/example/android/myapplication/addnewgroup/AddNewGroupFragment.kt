@@ -44,8 +44,6 @@ class AddNewGroupFragment : Fragment() {
             if (it==true) {
                         if( binding.newGroupName.text.toString() != "" && binding.newGroupLocation.text.toString() != ""){
                         addNewGroupViewModel.setvalue(binding.newGroupName.text.toString(),binding.newGroupLocation.text.toString())
-                       // binding.newGroupName.text = null
-                      //  binding.newGroupLocation.text = null
                             this.findNavController()
                             .navigate(AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeeGroupsFragment())
                             addNewGroupViewModel.doneNavigatingToGroupsFragment()

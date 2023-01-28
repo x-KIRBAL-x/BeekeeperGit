@@ -4,7 +4,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    
+
     <data>
         <variable
             name="group"
@@ -13,38 +13,39 @@
             name="clickListener"
             type="com.example.android.myapplication.beegroups.BeeGroupListener" />
     </data>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:onClick="@{() -> clickListener.onClick(group)}">
 
-    <ImageView
-        android:id="@+id/group_img"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/group"
-        app:GroupImage="@{group}"/>
-<!--    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(group)}">
 
-    <TextView
-        android:id="@+id/group_name"
-        android:layout_width="0dp"
-        android:layout_height="26dp"
-        android:textAlignment="center"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/group_img"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/group_img"
-        app:layout_constraintTop_toBottomOf="@+id/group_img"
-        tools:text="Group"
-        app:GroupName="@{group}"/>
+        <ImageView
+            android:id="@+id/group_img"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:GroupImage="@{group}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/group" />
+        <!--    -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            app:GroupName="@{group}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/group_img"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/group_img"
+            app:layout_constraintTop_toBottomOf="@+id/group_img"
+            tools:text="Group" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

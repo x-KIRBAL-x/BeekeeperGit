@@ -13,8 +13,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="744" />
-                            <option name="y" value="937" />
+                            <option name="x" value="746" />
+                            <option name="y" value="987" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -34,8 +34,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="500" />
-                            <option name="y" value="547" />
+                            <option name="x" value="672" />
+                            <option name="y" value="563" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -112,13 +112,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="502" />
-                            <option name="y" value="-195" />
+                            <option name="x" value="487" />
+                            <option name="y" value="-383" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
                             <entry key="action_beeManagementFragment_to_broodframeBalancing">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_beeManagementFragment_to_queenbeeManagement">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -138,8 +143,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
+                            <option name="x" value="244" />
+                            <option name="y" value="65" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -164,8 +169,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="744" />
-                            <option name="y" value="37" />
+                            <option name="x" value="897" />
+                            <option name="y" value="29" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -195,8 +200,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-200" />
+                            <option name="y" value="-1" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -207,6 +212,11 @@
                               </value>
                             </entry>
                             <entry key="action_beehiveReviewFragment_to_broodframeBalancing">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_beehiveReviewFragment_to_queenbeeManagement">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -263,6 +273,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_broodframeBalancing_to_beeManagementFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_broodframeBalancing_to_beehiveReviewFragment">
                               <value>
                                 <LayoutPositions />
@@ -308,10 +323,24 @@
                             <option name="y" value="416" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_queenbeeManagement_to_beeManagementFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_queenbeeManagement_to_beehiveReviewFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="selectGroup">
+                  <entry key="selectGroupFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">

@@ -4,6 +4,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.android.myapplication.R
+import com.example.android.myapplication.convertNumericDiseasesToString
 import com.example.android.myapplication.convertNumericQuantityToString
 import com.example.android.myapplication.database.Beehive
 

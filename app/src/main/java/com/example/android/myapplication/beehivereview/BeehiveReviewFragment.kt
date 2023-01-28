@@ -47,9 +47,9 @@ class BeehiveReviewFragment: Fragment() {
                     var noszema: Int = 0
                     var meszes: Int = 0
                     if (binding.nosemaSwitch.isChecked)
-                        noszema=1
+                        noszema = 1
                     if (binding.meszesSwitch.isChecked)
-                        meszes = 1
+                        meszes = 10
                     if(binding.broodframeNumberEdit.text.toString() != ""){
                         bfn = binding.broodframeNumberEdit.text.toString().toInt()
                     }
