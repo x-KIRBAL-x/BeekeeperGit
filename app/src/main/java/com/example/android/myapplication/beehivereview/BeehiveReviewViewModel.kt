@@ -24,14 +24,16 @@ class BeehiveReviewViewModel(
 
         fun getBeehive() = beehive
 
-        private val _navigateToDetailFragment = MutableLiveData<Int?>()
+        private val _navigateToPreviousFragment = MutableLiveData<Int?>()
         private val _editBeequeenCondition = MutableLiveData<Boolean?>()
         private val _editBeehivePopulation = MutableLiveData<Boolean?>()
         private val _editBroodframeQuantity = MutableLiveData<Boolean?>()
         private val _editHoneyframeQuantity = MutableLiveData<Boolean?>()
+        private val _navigateToNosemadescriptionFragment = MutableLiveData<Boolean?>()
+        private val _navigateToAscosphaeraApisDescriptionFragment = MutableLiveData<Boolean?>()
 
-    val navigateToDetailFragment: LiveData<Int?>
-        get() = _navigateToDetailFragment
+    val navigateToPreviousFragment: LiveData<Int?>
+        get() = _navigateToPreviousFragment
 
     val editBeequeenCondition: LiveData<Boolean?>
         get() = _editBeequeenCondition
@@ -44,6 +46,13 @@ class BeehiveReviewViewModel(
 
     val editHoneyframeQuantity: LiveData<Boolean?>
         get() = _editHoneyframeQuantity
+
+    val navigateToNosemadescriptionFragment: LiveData<Boolean?>
+        get() = _navigateToNosemadescriptionFragment
+
+    val navigateToAscosphaeraApisDescriptionFragment: LiveData<Boolean?>
+        get() = _navigateToAscosphaeraApisDescriptionFragment
+
 
     fun setBeequeenCondition(quality: Int){
         viewModelScope.launch {
@@ -77,14 +86,14 @@ class BeehiveReviewViewModel(
         }
     }
 
-    fun doneReview(date: String, broodframenumber: Int, honeyframenumber: Int,nosema: Int,meszes: Int,queenbeeYear: Int){
+    fun doneReview(date: String, broodframenumber: Int, honeyframenumber: Int, nosema: Int, ascosphaeraApis: Int, queenbeeYear: Int){
         viewModelScope.launch {
             val newReview = beehive.value ?: return@launch
             newReview.lastManagement = date
             newReview.broodFrameNumber = broodframenumber
             newReview.honeyFrameNumber = honeyframenumber
             newReview.noszema = nosema
-            newReview.meszesedes = meszes
+            newReview.AscosphaeraApis = ascosphaeraApis
             newReview.queenBeeYear = queenbeeYear
             database.updateHive(newReview)
         }
@@ -123,9 +132,25 @@ class BeehiveReviewViewModel(
     }
 
     fun clickOnDoneButton(){
-        _navigateToDetailFragment.value=navi.toInt()
+        _navigateToPreviousFragment.value=navi.toInt()
     }
     fun doneNavigating(){
-        _navigateToDetailFragment.value=null
+        _navigateToPreviousFragment.value=null
+    }
+
+    fun clickOnNosemaInfoButton(){
+        _navigateToNosemadescriptionFragment.value=true
+    }
+
+    fun donenavigateToNosemadescriptionFragment(){
+        _navigateToNosemadescriptionFragment.value=null
+    }
+
+    fun clickOnAscosphaeraApisInfoButton(){
+        _navigateToAscosphaeraApisDescriptionFragment.value=true
+    }
+
+    fun doneNavigateToAscosphaeraApisDescriptionFragment(){
+        _navigateToAscosphaeraApisDescriptionFragment.value=null
     }
 }

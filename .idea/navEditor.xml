@@ -50,6 +50,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="ascosphaeraApisDescriptionFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-429" />
+                            <option name="y" value="207" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="beeGroupsFragment">
                     <value>
                       <LayoutPositions>
@@ -118,7 +130,17 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_beeManagementFragment_to_beeStatistics">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_beeManagementFragment_to_broodframeBalancing">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_beeManagementFragment_to_honeyframeBalancing">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -129,6 +151,32 @@
                               </value>
                             </entry>
                             <entry key="action_beeManagementFragment_to_selectGroup">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_beeManagementFragment_to_sickBees">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="beeStatistics">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="704" />
+                            <option name="y" value="104" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_beeStatistics_to_beeManagementFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -206,6 +254,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_beehiveReviewFragment_to_ascosphaeraApisFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_beehiveReviewFragment_to_beehiveDetailFragment">
                               <value>
                                 <LayoutPositions />
@@ -216,7 +269,22 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_beehiveReviewFragment_to_honeyframeBalancing">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_beehiveReviewFragment_to_nosemaDescriptionFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_beehiveReviewFragment_to_queenbeeManagement">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_beehiveReviewFragment_to_sickBees">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -288,6 +356,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="broodframeBalancingDescription">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1005" />
+                            <option name="y" value="-334" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="groupDeleteFragment">
                     <value>
                       <LayoutPositions>
@@ -314,6 +394,61 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="honeyframeBalancing">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="746" />
+                            <option name="y" value="-644" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_honeyframeBalancing_to_beeManagementFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_honeyframeBalancing_to_beehiveReviewFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_honeyframeBalancing_to_honeyframeBalancingDescription">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="honeyframeBalancingDescription">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="996" />
+                            <option name="y" value="-640" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="nosemaDescriptionFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-428" />
+                            <option name="y" value="-181" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="queenbeeManagement">
                     <value>
                       <LayoutPositions>
@@ -335,7 +470,24 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_queenbeeManagement_to_queenbeeManagementDescription">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="queenbeeManagementDescription">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-202" />
+                            <option name="y" value="476" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -357,6 +509,32 @@
                               </value>
                             </entry>
                             <entry key="action_selectGroup_to_beeManagementFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="sickBees">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-84" />
+                            <option name="y" value="-533" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_sickBees_to_beeManagementFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_sickBees_to_beehiveReviewFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

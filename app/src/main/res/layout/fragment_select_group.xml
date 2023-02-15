@@ -16,19 +16,6 @@
         android:layout_height="match_parent"
         tools:context=".selectgroup.SelectGroupFragment">
 
-        <TextView
-            android:id="@+id/select_group_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Group"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/select_groups_list"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/select_groups_list"
@@ -36,7 +23,7 @@
             android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/close"
-            app:layout_constraintTop_toBottomOf="@+id/select_group_text"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
         <Button

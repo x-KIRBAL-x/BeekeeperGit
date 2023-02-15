@@ -31,7 +31,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/group" />
-        <!--    -->
 
         <TextView
             android:id="@+id/group_name"

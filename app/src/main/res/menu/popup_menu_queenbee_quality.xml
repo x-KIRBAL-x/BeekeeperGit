@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/popUpMenuQuality_Zero"
+        android:title="@string/zero"/>
+    <item
         android:id="@+id/popUpMenuQuality_One"
         android:title="@string/one"/>
     <item

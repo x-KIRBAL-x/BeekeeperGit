@@ -3,8 +3,9 @@ package com.example.android.myapplication
 import android.content.res.Resources
 
 fun convertNumericQualityToString(quality: Int, resources: Resources): String{
-    var qualityString = resources.getString(R.string.three)
+    var qualityString = ""
     when (quality){
+        0 -> qualityString = resources.getString(R.string.zero)
         1 -> qualityString = resources.getString(R.string.one)
         2 -> qualityString = resources.getString(R.string.two)
         3 -> qualityString = resources.getString(R.string.three)
@@ -15,7 +16,7 @@ fun convertNumericQualityToString(quality: Int, resources: Resources): String{
 }
 
 fun convertNumericQuantityToString(quantity: Int, resources: Resources): String{
-    var quantityString = resources.getString(R.string.two_quantity)
+    var quantityString = ""
     when (quantity){
         1 -> quantityString = resources.getString(R.string.one_quantity)
         2 -> quantityString = resources.getString(R.string.two_quantity)
@@ -24,12 +25,12 @@ fun convertNumericQuantityToString(quantity: Int, resources: Resources): String{
     return quantityString
 }
 
-fun convertNumericDiseasesToString(diseases: Int, resources: Resources): String{
+fun convertNumericSickToString(diseases: Int, resources: Resources): String{
     var diseasesString = ""
     when (diseases){
-        1 -> diseasesString = "NOSEMA"
-        10 -> diseasesString = "MESZES"
-        11-> diseasesString = "NOSEMA AND MESZES"
+        1 -> diseasesString = resources.getString(R.string.nosema)
+        10 -> diseasesString = resources.getString(R.string.ascosphaera_apis)
+        11-> diseasesString = resources.getString(R.string.ascosphaera_apis_and_nosema)
     }
     return diseasesString
 }

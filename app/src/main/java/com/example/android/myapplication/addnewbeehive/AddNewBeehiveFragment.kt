@@ -16,7 +16,6 @@ import com.example.android.myapplication.database.BeeDatabase
 import com.example.android.myapplication.databinding.FragmentAddNewBeehiveBinding
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.math.floor
 
 class AddNewBeehiveFragment : Fragment(){
     override fun onCreateView(
@@ -44,7 +43,7 @@ class AddNewBeehiveFragment : Fragment(){
         addNewBeehiveViewModel.clickDoneButton.observe(this, Observer {
             if(it==true){
                 if(binding.newBeehiveName.text.toString() != "" && binding.queenbeeAge.text.toString() != ""){
-                    val queenYear: Int = floor(binding.queenbeeAge.text.toString().toFloat()).toInt()
+                    val queenYear: Int = binding.queenbeeAge.text.toString().toInt()
                     if(queenYear>(SimpleDateFormat("yyyy").format(Date()).toString().toInt()-6)
                         && queenYear<=SimpleDateFormat("yyyy").format(Date()).toString().toInt()){
                     addNewBeehiveViewModel.setValue(binding.newBeehiveName.text.toString(),queenYear)
@@ -52,7 +51,7 @@ class AddNewBeehiveFragment : Fragment(){
                     addNewBeehiveViewModel.donenavigating()
                     }
                     else{
-                        Toast.makeText(application, "          The year isn't correct!\n(max. of 5 from the current year)",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(application, resources.getString(R.string.queenbee_warning),Toast.LENGTH_SHORT).show()
                     }
                 }
                 else{

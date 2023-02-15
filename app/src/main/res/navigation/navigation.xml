@@ -20,8 +20,8 @@
         <action
             android:id="@+id/action_beeKeeperMenuFragment_to_selectGroup"
             app:destination="@id/selectGroupFragment"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:enterAnim="@anim/slide_in_right"/>
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/beeGroupsFragment"
@@ -46,6 +46,7 @@
             app:enterAnim="@anim/slide_in_left"
             app:launchSingleTop="true"
             app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/beeGroupsFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -240,6 +241,50 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popUpTo="@id/queenbeeManagement"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beehiveReviewFragment_to_honeyframeBalancing"
+            app:destination="@id/honeyframeBalancing"
+            app:enterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/honeyframeBalancing"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beehiveReviewFragment_to_sickBees"
+            app:destination="@id/sickBees"
+            app:enterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/sickBees"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beehiveReviewFragment_to_nosemaDescriptionFragment"
+            app:destination="@id/nosemaDescriptionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/nosemaDescriptionFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beehiveReviewFragment_to_ascosphaeraApisFragment"
+            app:destination="@id/ascosphaeraApisDescriptionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/ascosphaeraApisDescriptionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nosemaDescriptionFragment"
+        android:name="com.example.android.myapplication.nosemadescription.NosemaDescriptionFragment"
+        android:label="Nosema description"
+        tools:layout="@layout/fragment_nosema_info">
+    </fragment>
+    <fragment
+        android:id="@+id/ascosphaeraApisDescriptionFragment"
+        android:name="com.example.android.myapplication.ascosphaeraapisdescription.AscosphaeraApisDescriptionFragment"
+        android:label="Ascosphaera a. description"
+        tools:layout="@layout/fragment_ascosphaera_apis_info">
     </fragment>
     <fragment
         android:id="@+id/beeManagementFragment"
@@ -253,8 +298,12 @@
             android:id="@+id/action_beeManagementFragment_to_selectGroup"
             app:destination="@id/selectGroupFragment"
             app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popUpTo="@id/beeKeeperMenuFragment"/>
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/beeManagementFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_beeManagementFragment_to_broodframeBalancing"
             app:destination="@id/broodframeBalancing"
@@ -271,31 +320,54 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popUpTo="@id/queenbeeManagement"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beeManagementFragment_to_honeyframeBalancing"
+            app:destination="@id/honeyframeBalancing"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/honeyframeBalancing"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beeManagementFragment_to_sickBees"
+            app:destination="@id/sickBees"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/sickBees"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beeManagementFragment_to_beeStatistics"
+            app:destination="@id/beeStatistics"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/beeStatistics"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/selectGroupFragment"
         android:name="com.example.android.myapplication.selectgroup.SelectGroupFragment"
-        android:label="Groups"
-        tools:label="Select Group"
+        android:label="Select Group"
         tools:layout="@layout/fragment_select_group">
         <action
             android:id="@+id/action_selectGroup_to_beeManagementFragment"
             app:destination="@id/beeManagementFragment"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"
-            app:popUpTo="@id/selectGroupFragment" />
+            app:popEnterAnim="@anim/slide_in_left" />
         <action
             android:id="@+id/action_selectGroup_to_beeKeeperMenuFragment"
             app:destination="@id/beeKeeperMenuFragment"
             app:enterAnim="@anim/slide_in_left"
-            app:popEnterAnim="@anim/slide_in_left" />
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/selectGroupFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/broodframeBalancing"
         android:name="com.example.android.myapplication.broodframebalancing.BroodFrameBalancingFragment"
-        tools:label="Brood Frame Balancing"
+        android:label="Brood Frame Balancing"
         tools:layout="@layout/fragment_brood_frame_balancing">
         <argument
             android:name="groupkey"
@@ -311,8 +383,95 @@
             app:enterAnim="@anim/slide_in_left"
             app:launchSingleTop="true"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popUpTo="@id/beeManagementFragment"
+            app:popUpTo="@id/broodframeBalancing"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_broodframeBalancing_to_broodframeBalancingDescription"
+            app:destination="@id/broodframeBalancingDescription"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/broodframeBalancingDescription"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/broodframeBalancingDescription"
+        android:name="com.example.android.myapplication.broodframebalancingdescription.BroodFrameBalancingDescription"
+        android:label="Brood Frame B. Description"
+        tools:layout="@layout/fragment_brood_frame_balancing_info"/>
+    <fragment
+        android:id="@+id/honeyframeBalancing"
+        android:name="com.example.android.myapplication.honeyframebalancing.HoneyFrameBalancingFragment"
+        android:label="Honey Frame Balancing"
+        tools:layout="@layout/fragment_honey_frame_balancing">
+        <argument
+            android:name="groupkey"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_honeyframeBalancing_to_beeManagementFragment"
+            app:destination="@id/beeManagementFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/honeyframeBalancing"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_honeyframeBalancing_to_beehiveReviewFragment"
+            app:destination="@id/beehiveReviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left" />
+        <action
+            android:id="@+id/action_honeyframeBalancing_to_honeyframeBalancingDescription"
+            app:destination="@id/honeyframeBalancingDescription"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/honeyframeBalancingDescription"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/honeyframeBalancingDescription"
+        android:name="com.example.android.myapplication.honeyframebalancingdescription.HoneyFrameBalancingDescription"
+        android:label="Honey Frame B. Description"
+        tools:layout="@layout/fragment_honey_frame_balancing_info"/>
+    <fragment
+        android:id="@+id/beeStatistics"
+        android:name="com.example.android.myapplication.beestatistics.BeeStatisticsFragment"
+        android:label="Bee Statistics"
+        tools:layout="@layout/fragment_statistics">
+        <argument
+            android:name="groupkey"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_beeStatistics_to_beeManagementFragment"
+            app:destination="@id/beeManagementFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/beeStatistics"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sickBees"
+        android:name="com.example.android.myapplication.sickbees.SickBeesFragment"
+        android:label="Sick Bees"
+        tools:layout="@layout/fragment_sick_bees">
+        <argument
+            android:name="groupkey"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_sickBees_to_beeManagementFragment"
+            app:destination="@id/beeManagementFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/sickBees"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_sickBees_to_beehiveReviewFragment"
+            app:destination="@id/beehiveReviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/queenbeeManagement"
@@ -333,7 +492,20 @@
             app:enterAnim="@anim/slide_in_left"
             app:launchSingleTop="true"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popUpTo="@id/beeManagementFragment"
+            app:popUpTo="@id/queenbeeManagement"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_queenbeeManagement_to_queenbeeManagementDescription"
+            app:destination="@id/queenbeeManagementDescription"
+            app:enterAnim="@anim/slide_in_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/queenbeeManagementDescription"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/queenbeeManagementDescription"
+        android:name="com.example.android.myapplication.honeyframebalancingdescription.HoneyFrameBalancingDescription"
+        android:label="Queenbee M. Description"
+        tools:layout="@layout/fragment_queenbee_management_info"/>
 </navigation>

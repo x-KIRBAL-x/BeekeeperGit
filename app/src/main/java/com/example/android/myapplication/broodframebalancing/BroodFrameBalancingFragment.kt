@@ -57,6 +57,13 @@ class BroodFrameBalancingFragment : Fragment() {
             }
         })
 
+        broodFrameViewModel.navigateToBroodFrameBalancingDescriptionFragment.observe(this, Observer {
+            if (it==true){
+                this.findNavController().navigate(BroodFrameBalancingFragmentDirections.actionBroodframeBalancingToBroodframeBalancingDescription())
+                broodFrameViewModel.doneNavigateToBroodFrameBalancingDescriptionFragment()
+            }
+        })
+
         broodFrameViewModel.navigateToBeeManagementFragment.observe(this,Observer{
             if(it==true){
                 this.findNavController().navigate(BroodFrameBalancingFragmentDirections.actionBroodframeBalancingToBeeManagementFragment(arguments.groupkey))

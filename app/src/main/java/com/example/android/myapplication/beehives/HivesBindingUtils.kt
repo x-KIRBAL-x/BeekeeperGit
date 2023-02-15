@@ -4,7 +4,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.android.myapplication.R
-import com.example.android.myapplication.convertNumericQualityToString
 import com.example.android.myapplication.database.BeeGroup
 import com.example.android.myapplication.database.Beehive
 
@@ -12,13 +11,6 @@ import com.example.android.myapplication.database.Beehive
 fun ImageView.SetBeehiveImg(item: Beehive?){
     item?.let {
         setImageResource(R.drawable.hive)
-    }
-}
-
-@BindingAdapter("BeehiveName")
-fun TextView.setBeehiveName(item: Beehive?){
-    item?.let {
-        text = "Beehive Name: " + item.beehiveName
     }
 }
 

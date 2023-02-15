@@ -36,6 +36,13 @@ class BeeManagementFragment: Fragment() {
         binding.beeManagementViewModel = beeManagementViewModel
         binding.setLifecycleOwner(this)
 
+        beeManagementViewModel.navigateToQueenBeeManagementFragment.observe(this, Observer {
+            if(it==true){
+                this.findNavController().navigate(BeeManagementFragmentDirections.actionBeeManagementFragmentToQueenbeeManagement(arguments.groupkey))
+                beeManagementViewModel.doneNavigatingToQueenBeeMAnagementFragment()
+            }
+        })
+
         beeManagementViewModel.navigateToBroodFrameBalancingFragment.observe(this, Observer {
             if(it==true){
                 this.findNavController().navigate(BeeManagementFragmentDirections.actionBeeManagementFragmentToBroodframeBalancing(arguments.groupkey))
@@ -43,10 +50,24 @@ class BeeManagementFragment: Fragment() {
             }
         })
 
-        beeManagementViewModel.navigateToQueenBeeManagementFragment.observe(this, Observer {
+        beeManagementViewModel.navigateToHoneyFrameBalancingFragment.observe(this, Observer {
             if(it==true){
-                this.findNavController().navigate(BeeManagementFragmentDirections.actionBeeManagementFragmentToQueenbeeManagement(arguments.groupkey))
-                beeManagementViewModel.doneNavigatingToQueenBeeMAnagementFragment()
+                this.findNavController().navigate(BeeManagementFragmentDirections.actionBeeManagementFragmentToHoneyframeBalancing(arguments.groupkey))
+                beeManagementViewModel.doneNavigatingToHoneyFrameBalancingFragment()
+            }
+        })
+
+        beeManagementViewModel.navigateToSickBeesFragment.observe(this, Observer {
+            if (it==true){
+                this.findNavController().navigate(BeeManagementFragmentDirections.actionBeeManagementFragmentToSickBees(arguments.groupkey))
+                beeManagementViewModel.doneNavigatingToSickBeesFragment()
+            }
+        })
+
+        beeManagementViewModel.navigateToBeeStatisticsFragment.observe(this, Observer {
+            if(it==true){
+                this.findNavController().navigate(BeeManagementFragmentDirections.actionBeeManagementFragmentToBeeStatistics(arguments.groupkey))
+                beeManagementViewModel.doneNavigatingToBeeStatisticsFragment()
             }
         })
 

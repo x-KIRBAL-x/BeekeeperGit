@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -72,6 +71,7 @@
                             android:layout_width="160dp"
                             android:layout_height="160dp"
                             android:text="Honey \n frame \n balancing"
+                            android:onClick="@{() -> beeManagementViewModel.clickOnHoneyFrameBalancingButton()}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/manage_qeenbee"
                             app:layout_constraintEnd_toStartOf="@id/stat"
@@ -81,7 +81,8 @@
                             android:id="@+id/stat"
                             android:layout_width="160dp"
                             android:layout_height="160dp"
-                            android:text="Stat"
+                            android:text="Statistics"
+                            android:onClick="@{()-> beeManagementViewModel.clickOnStatisticsButton()}"
                             app:layout_constraintTop_toBottomOf="@id/kiegyenlites_fias"
                             app:layout_constraintStart_toEndOf="@id/kiegyenlites_mez"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -92,12 +93,11 @@
                             android:layout_width="160dp"
                             android:layout_height="160dp"
                             android:text="Sick \n beehives"
+                            android:onClick="@{() -> beeManagementViewModel.clickOnSickBeesButton()}"
                             app:layout_constraintTop_toBottomOf="@id/kiegyenlites_mez"
                             app:layout_constraintStart_toStartOf="@id/kiegyenlites_mez"
                             app:layout_constraintEnd_toEndOf="@id/kiegyenlites_mez"
                             app:layout_constraintBottom_toBottomOf="parent"/>
-
-
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Beekeeper</string>
+    <string name="zero">Queenless</string>
     <string name="one">Very bad</string>
     <string name="two">Bad</string>
     <string name="three">Medium</string>
@@ -8,4 +9,13 @@
     <string name="one_quantity">Few</string>
     <string name="two_quantity">Enough</string>
     <string name="three_quantity">Much</string>
+    <string name="ascosphaera_apis_and_nosema">Ascosphaera apis and Nosema</string>
+    <string name="ascosphaera_apis">Ascosphaera apis</string>
+    <string name="nosema">Nosema</string>
+    <string name="queenbee_warning"> \ \ \ \ \ \ \ \ \ The year isn\'t correct! \n (max. of 5 from the current year)</string>
+    <string name="nosema_description">description</string>
+    <string name="ascosphaera_apis_description">description</string>
+    <string name="queenbee_man_info">description</string>
+    <string name="brood_frame_info">description</string>
+    <string name="honey_frame_info">description</string>
 </resources>

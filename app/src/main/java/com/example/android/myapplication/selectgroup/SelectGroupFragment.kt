@@ -50,7 +50,7 @@ class SelectGroupFragment: Fragment() {
         selectGroupsViewModel.navigateToSelectManagementFragment.observe(this, Observer { group ->
             group?.let{
                 this.findNavController().navigate(SelectGroupFragmentDirections.actionSelectGroupToBeeManagementFragment(group))
-                selectGroupsViewModel.doneNavigatingMenuFragment()
+                selectGroupsViewModel.doneNavigatingToSelectManagementFragment()
             }
         })
 

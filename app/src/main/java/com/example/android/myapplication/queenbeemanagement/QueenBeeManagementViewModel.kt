@@ -12,6 +12,7 @@ class QueenBeeManagementViewModel(
      dataSource: BeeDatabaseDao): ViewModel() {
 
     private val _navigateToReviewFragment = MutableLiveData<Long>()
+    private val _navigateToQuennbeeManagementDescriptionFragment = MutableLiveData<Boolean?>()
     private val _navigateToManagementFragment = MutableLiveData<Boolean?>()
 
     val database = dataSource
@@ -23,8 +24,12 @@ class QueenBeeManagementViewModel(
     val navigateToReviewFragment
         get() = _navigateToReviewFragment
 
+    val navigateToQuennbeeManagementDescriptionFragment: LiveData<Boolean?>
+        get() =_navigateToQuennbeeManagementDescriptionFragment
+
     val navigateToManagementFragment: LiveData<Boolean?>
         get() = _navigateToManagementFragment
+
 
     fun doneNavigateToReviewFragment(){
         _navigateToReviewFragment.value=null
@@ -32,6 +37,14 @@ class QueenBeeManagementViewModel(
 
     fun onClickBeehive(id: Long){
         _navigateToReviewFragment.value=id
+    }
+
+    fun clickOnInfoButton(){
+        _navigateToQuennbeeManagementDescriptionFragment.value=true
+    }
+
+    fun donenavigateTonavigateToQuennbeeManagementDescriptionFragment(){
+        _navigateToQuennbeeManagementDescriptionFragment.value=null
     }
 
     fun clickOnCloseButton(){

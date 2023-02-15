@@ -16,7 +16,6 @@ import com.example.android.myapplication.database.BeeDatabase
 import com.example.android.myapplication.databinding.FragmentBeehiveReviewBinding
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.math.log
 
 class BeehiveReviewFragment: Fragment() {
     override fun onCreateView(
@@ -37,19 +36,20 @@ class BeehiveReviewFragment: Fragment() {
 
         binding.setLifecycleOwner(this)
 
-        beehiveReviewViewModel.navigateToDetailFragment.observe(this, Observer {
+        beehiveReviewViewModel.navigateToPreviousFragment.observe(this, Observer {
             if (it!=null){
                 if(binding.broodframeNumberEdit.hint.toString() != "Edit" && binding.honeyFrameNumberEdit.hint.toString() != "Edit"
                     || binding.broodframeNumberEdit.text.toString() != "" && binding.honeyFrameNumberEdit.text.toString() != ""){
                     var bfn: Int
                     var hfn: Int
                     var queenbeeYear: Int
+                    var queenBeeAge: Int
                     var noszema: Int = 0
-                    var meszes: Int = 0
+                    var ascosphaeraApis: Int = 0
                     if (binding.nosemaSwitch.isChecked)
                         noszema = 1
-                    if (binding.meszesSwitch.isChecked)
-                        meszes = 10
+                    if (binding.ascosphaeraApisSwitch.isChecked)
+                        ascosphaeraApis = 10
                     if(binding.broodframeNumberEdit.text.toString() != ""){
                         bfn = binding.broodframeNumberEdit.text.toString().toInt()
                     }
@@ -71,18 +71,15 @@ class BeehiveReviewFragment: Fragment() {
                     if(queenbeeYear>(SimpleDateFormat("yyyy").format(Date()).toString().toInt()-6)
                         && queenbeeYear<=SimpleDateFormat("yyyy").format(Date()).toString().toInt()) {
                             beehiveReviewViewModel.doneReview(
-                                SimpleDateFormat("yyyy-MM-DD").format(
+                                SimpleDateFormat("EEEE yyyy-MMM-dd").format(
                                     Date()
-                                ).toString(), bfn, hfn, noszema, meszes, queenbeeYear
-                            )
+                                ).toString(), bfn, hfn, noszema, ascosphaeraApis, queenbeeYear)
                         if(it==0){
                             this.findNavController().navigate(
                                 BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToBeehiveDetailFragment(
                                     arguments.beehivekey,
-                                    arguments.beegroupKey
-                                )
-                            )}
-
+                                    arguments.beegroupKey))
+                        }
                         if(it==1){
                             this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToQueenbeeManagement(
                                 arguments.beegroupKey))
@@ -91,10 +88,18 @@ class BeehiveReviewFragment: Fragment() {
                             this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToBroodframeBalancing(
                                 arguments.beegroupKey))
                         }
+                        if(it==3){
+                            this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToHoneyframeBalancing(
+                                arguments.beegroupKey))
+                        }
+                        if (it==4){
+                            this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToSickBees(
+                                arguments.beegroupKey))
+                        }
                             beehiveReviewViewModel.doneNavigating()
                         }
                     else{
-                        Toast.makeText(application, "The Queenbee year isn't correct!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(application, resources.getString(R.string.queenbee_warning), Toast.LENGTH_SHORT).show()
                     }
                 }else{
                     Toast.makeText(application, "Please fill all field!",Toast.LENGTH_SHORT).show()
@@ -105,10 +110,11 @@ class BeehiveReviewFragment: Fragment() {
         beehiveReviewViewModel.editBeequeenCondition.observe(this, Observer {
             if(it==true){
                 var popupmenu: PopupMenu = PopupMenu(application,binding.queenbeeConditionEdit)
-                popupmenu.menuInflater.inflate(R.menu.popup_menu_button_quality,popupmenu.menu)
+                popupmenu.menuInflater.inflate(R.menu.popup_menu_queenbee_quality,popupmenu.menu)
                 popupmenu.show()
                 popupmenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
                     when(item.itemId) {
+                        R.id.popUpMenuQuality_Zero -> beehiveReviewViewModel.setBeequeenCondition(0)
                         R.id.popUpMenuQuality_One -> beehiveReviewViewModel.setBeequeenCondition(1)
                         R.id.popUpMenuQuality_Two -> beehiveReviewViewModel.setBeequeenCondition(2)
                         R.id.popUpMenuQuality_Three -> beehiveReviewViewModel.setBeequeenCondition(3)
@@ -120,11 +126,10 @@ class BeehiveReviewFragment: Fragment() {
                 beehiveReviewViewModel.doneEditBeequennCondition()
             }
         })
-
        beehiveReviewViewModel.editBeehivePopulation.observe(this, Observer {
             if(it==true){
                 var popupmenu: PopupMenu = PopupMenu(application,binding.hivePopulationEdit)
-                popupmenu.menuInflater.inflate(R.menu.popup_menu_button_quality,popupmenu.menu)
+                popupmenu.menuInflater.inflate(R.menu.popup_menu_population_quality,popupmenu.menu)
                 popupmenu.show()
                 popupmenu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
                     when(item.itemId) {
@@ -174,6 +179,19 @@ class BeehiveReviewFragment: Fragment() {
             }
         })
 
+        beehiveReviewViewModel.navigateToNosemadescriptionFragment.observe(this, Observer {
+            if(it==true){
+                this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToNosemaDescriptionFragment())
+                beehiveReviewViewModel.donenavigateToNosemadescriptionFragment()
+            }
+        })
+
+        beehiveReviewViewModel.navigateToAscosphaeraApisDescriptionFragment.observe(this, Observer {
+            if(it==true){
+                this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToAscosphaeraApisFragment())
+                beehiveReviewViewModel.doneNavigateToAscosphaeraApisDescriptionFragment()
+            }
+        })
 
         return binding.root
     }

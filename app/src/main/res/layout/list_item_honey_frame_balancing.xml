@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+    <variable
+        name="beehive"
+        type="com.example.android.myapplication.database.Beehive"/>
+        <variable
+            name="clickListener"
+            type="com.example.android.myapplication.honeyframebalancing.HoneyFrameBalancingClickListener" />
+
+    </data>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(beehive)}"
+        android:background="@drawable/my_border">
+
+        <TextView
+            android:id="@+id/beehive_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="130dp"
+            app:HoneyFrameBalanceName="@{beehive}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/beehive_item_img" />
+
+        <TextView
+            android:id="@+id/beehive_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="130dp"
+            app:BeehiveHoneyFrameNumber="@{beehive}"
+            app:layout_constraintEnd_toEndOf="@id/beehive_item_name"
+            app:layout_constraintStart_toStartOf="@id/beehive_item_name"
+            app:layout_constraintTop_toBottomOf="@id/beehive_item_name" />
+
+        <ImageView
+            android:id="@+id/beehive_item_img"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:HoneyFrameBalanceImage="@{beehive}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/beehive_item_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -3,7 +3,6 @@ package com.example.android.myapplication.database
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.Date
 
 @Entity(tableName = "beehive_table")
 data class Beehive(
@@ -43,11 +42,11 @@ data class Beehive(
     @ColumnInfo(name = "honey_frame")
     var honeyFrame: Int = 2,
 
-    @ColumnInfo(name = "noszema")
+    @ColumnInfo(name = "nosema")
     var noszema: Int = 0,
 
-    @ColumnInfo(name = "meszesedes")
-    var meszesedes: Int = 0,
+    @ColumnInfo(name = "ascosphaera_apis")
+    var AscosphaeraApis: Int = 0,
 
     @ColumnInfo(name = "group_id")
     var groupId: Long = 0L

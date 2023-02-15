@@ -75,9 +75,9 @@ fun Switch.setNosemaValue(item: Beehive?){
     }
 }
 
-@BindingAdapter("Meszes")
+@BindingAdapter("AscosphaeraApis")
 fun Switch.setMeszesValue(item: Beehive?){
     item?.let {
-        isChecked = item.meszesedes==10
+        isChecked = item.AscosphaeraApis==10
     }
 }

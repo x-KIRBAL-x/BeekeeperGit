@@ -55,6 +55,13 @@ class QueenBeeManagementFragment : Fragment() {
             }
         })
 
+        queenBeeManagementViewModel.navigateToQuennbeeManagementDescriptionFragment.observe(this, Observer {
+            if(it==true){
+                this.findNavController().navigate(QueenBeeManagementFragmentDirections.actionQueenbeeManagementToQueenbeeManagementDescription())
+                queenBeeManagementViewModel.donenavigateTonavigateToQuennbeeManagementDescriptionFragment()
+            }
+        })
+
         queenBeeManagementViewModel.navigateToManagementFragment.observe(this,Observer{
             if(it==true){
                 this.findNavController().navigate(QueenBeeManagementFragmentDirections.actionQueenbeeManagementToBeeManagementFragment(arguments.groupkey))

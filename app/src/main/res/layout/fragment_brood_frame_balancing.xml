@@ -6,7 +6,7 @@
 
     <data>
         <variable
-            name="BroodFrameViewModel"
+            name="broodFrameViewModel"
             type="com.example.android.myapplication.broodframebalancing.BroodFrameBalancingViewModel" />
     </data>
 
@@ -16,14 +16,14 @@
         android:layout_height="match_parent"
         tools:context=".beegroups.BeeGroupsFragment">
 
-        <TextView
-            android:id="@+id/brood_frame_balancing_text"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/brood_frame_balancing_info"
+            android:layout_width="@dimen/info_button_width"
             android:layout_height="wrap_content"
-            android:text="Brood frame bees"
+            android:text="\?"
             android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="@dimen/margin_end"
+            android:onClick="@{()->broodFrameViewModel.clickOnInfoButton()}"
             app:layout_constraintBottom_toTopOf="@id/brood_frame_list"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -36,7 +36,7 @@
             android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/close"
-            app:layout_constraintTop_toBottomOf="@+id/brood_frame_balancing_text"
+            app:layout_constraintTop_toBottomOf="@+id/brood_frame_balancing_info"
             app:layout_constraintEnd_toEndOf="parent"
             />
         <Button
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Close"
-            android:onClick="@{() -> BroodFrameViewModel.clickOnCloseButton()}"
+            android:onClick="@{() -> broodFrameViewModel.clickOnCloseButton()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/brood_frame_list"
