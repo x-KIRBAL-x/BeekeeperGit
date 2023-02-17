@@ -64,8 +64,8 @@ class BeeStatisticsFragment: Fragment() {
 
         populatePieChart(population,populationname)
         queenBeeAgeBarChart(queenBeeAge)
-        binding.requiredQeenbee.text = beeStatisticsViewModel.getAllBadQueenbee().toString() + " / "
-        binding.sumQueenbee.text = beeStatisticsViewModel.getAllQueenbee().toString()
+        binding.requiredQueenbee.text = beeStatisticsViewModel.getAllBadQueenbee().toString() + " / "
+        binding.sumQueenbee.text = beeStatisticsViewModel.getAllQueenbee().toString() + " "
 
         return binding.root
     }

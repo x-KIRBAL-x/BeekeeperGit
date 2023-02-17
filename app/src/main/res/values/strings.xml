@@ -13,8 +13,41 @@
     <string name="ascosphaera_apis">Ascosphaera apis</string>
     <string name="nosema">Nosema</string>
     <string name="queenbee_warning"> \ \ \ \ \ \ \ \ \ The year isn\'t correct! \n (max. of 5 from the current year)</string>
-    <string name="nosema_description">description</string>
-    <string name="ascosphaera_apis_description">description</string>
+    <string name="nosema_description">
+        <b>Nosema apis</b> is a microsporidian, a small, unicellular parasite recently
+        reclassified as a fungus that mainly affects honey bees. It causes <b>nosemosis</b>, also called <b>nosema</b>, which is
+        the most common and widespread of adult honey bee diseases.<i>[1]</i> The dormant stage of <i>N. apis</i> is a long-lived spore which
+        is resistant to temperature extremes and dehydration, and cannot be killed by freezing the contaminated comb. Nosemosis
+        is a listed disease with the Office International des Epizooties (OIE). \n \n
+        <i>[1]</i> Johannes Eckert, Karl Theodor Friedhoff, Horst Zahner, Peter Deplazes: Lehrbuch der Parasitologie für die Tiermedizin (German).
+        2nd Ed., Georg Thieme 2008, ISBN 978-3-8304-1072-0, p. 140. \n \n
+        <b>Effects on the hive</b> \n \n
+        Nosema spores are spread to other colony members through fecal matter. The disease impairs the digestion of pollen, thereby shortening
+        the life of the bee. A greater proportion of worker bees become infected than drones or queens, probably due to the comb-cleaning activities
+        of young bees in which drones and queens do not participate. Nosema-infected bees do not attend or feed the queen to the same extent as healthy
+        bees, which helps the queen to escape infection. When the queen becomes infected, her ovaries degenerate and her egg-laying capacity is reduced
+        due to atrophy of the oocytes. Queens that become infected by the parasite during the brood-rearing season are superseded by the bees. \n \n
+        The seasonal trend of typical infections exhibits low levels during summer, a small peak in autumn, and a slow rise of infection during winter.
+        It is more common during times of confinement - winter and spring. In the spring, the level of infection increases rapidly as brood-rearing starts
+        and while flight possibilities are still limited. Colonies in northern climates are more seriously affected than colonies in the south because of
+        the increased amount of time bees are confined in the hive. Nosema, if left untreated, can cause queen supersedure, winter kills, reduced honey
+        yields, and dwindling populations.
+    </string>
+    <string name="ascosphaera_apis_description">
+        <b>Ascosphaera apis</b> is the fungal cause of the honey bee (Apis mellifera) larval disease chalkbrood. Spores of this fungus germinate within the
+        digestive tract of bees, then begin mycelial growth during the last instar of larval development. Dead larval and pupal bees appear chalky thanks
+        to growth throughout the bee of mycelia. These chalky \'mummies\' are highly infectious, and spores of this fungus often reinfect colonies via
+        stored food supplies or direct transport to younger larvae by adult bees working within the nest. Adult bees reduce the effects of this fungus on
+        the colony by frequently identifying and removing diseased individuals. The disease is associated with high brood density (productivity) and cooler
+        outside temperatures. \n \n
+        <b>References for Ascosphaera apis and <i>chalkbrood</i></b>\n \n
+        <a href="https://www.hgsc.bcm.edu/sites/default/files/images/Ident.A.apis_DNAsegue.pdf">Anderson DL, Gibbs AJ, and Gibson NL. 1998. Indentification and phylogeny of spore-cyst fungi (Ascosphaera spp.) using ribosomal DNA sequences. Mycol. Res. 102(5):541-547.</a> \n \n
+
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8441766/?dopt=Abstract">Qin H, Welker DL, Youssef NN. 1993. Isolation and characterization of a linear plasmid from the entomopathogenic fungus Ascosphaera apis. Plasmid. 29(1):19-30.</a> \n \n
+
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10950136/?dopt=Abstract">Williams DL. 2000. A Veterinary Approach to the European Honey Bee (Apis mellifera). The Veterinary Journal. 160:61?7.</a> \n \n
+
+        <a href="https://www.hgsc.bcm.edu/sites/default/files/images/review_Chalkb.pdf">Michael Hornitzky. 2001. Literature review of chalkbrood?a fungal disease of honeybees.(Rural Industries Research and Development Corporation).</a></string>
     <string name="queenbee_man_info">description</string>
     <string name="brood_frame_info">description</string>
     <string name="honey_frame_info">description</string>

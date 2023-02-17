@@ -1,6 +1,7 @@
 package com.example.android.myapplication.ascosphaeraapisdescription
 
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,8 @@ class AscosphaeraApisDescriptionFragment: Fragment() {
     ): View? {
         val binding: FragmentAscosphaeraApisInfoBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_ascosphaera_apis_info, container, false)
+
+        binding.ascosphaeraApisText.movementMethod = LinkMovementMethod.getInstance()
         return binding.root
     }
 }
