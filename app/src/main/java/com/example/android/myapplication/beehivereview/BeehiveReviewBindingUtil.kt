@@ -7,6 +7,7 @@ import androidx.databinding.BindingAdapter
 import com.example.android.myapplication.convertNumericQualityToString
 import com.example.android.myapplication.convertNumericQuantityToString
 import com.example.android.myapplication.database.Beehive
+import com.google.android.material.textfield.TextInputEditText
 
 @BindingAdapter("QueenbeeYearEdit")
 fun EditText.setQueenbeeYear(item: Beehive?){
@@ -14,7 +15,6 @@ fun EditText.setQueenbeeYear(item: Beehive?){
         hint = item.queenBeeYear.toString()
     }
 }
-
 
 @BindingAdapter("QueenbeeCondition")
 fun TextView.setQueenbeeCondition(item: Beehive?){

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import android.widget.Toast
+import androidx.core.view.get
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -43,7 +44,6 @@ class BeehiveReviewFragment: Fragment() {
                     var bfn: Int
                     var hfn: Int
                     var queenbeeYear: Int
-                    var queenBeeAge: Int
                     var noszema: Int = 0
                     var ascosphaeraApis: Int = 0
                     if (binding.nosemaSwitch.isChecked)
@@ -65,7 +65,7 @@ class BeehiveReviewFragment: Fragment() {
                     if(binding.queenbeeYearEdit.text.toString() != ""){
                         queenbeeYear = binding.queenbeeYearEdit.text.toString().toInt()
                     }
-                    else{
+                    else {
                         queenbeeYear = binding.queenbeeYearEdit.hint.toString().toInt()
                     }
                     if(queenbeeYear>(SimpleDateFormat("yyyy").format(Date()).toString().toInt()-6)
