@@ -41,13 +41,17 @@
         the colony by frequently identifying and removing diseased individuals. The disease is associated with high brood density (productivity) and cooler
         outside temperatures. \n \n
         <b>References for Ascosphaera apis and <i>chalkbrood</i></b>\n \n
-        <a href="https://www.hgsc.bcm.edu/sites/default/files/images/Ident.A.apis_DNAsegue.pdf">Anderson DL, Gibbs AJ, and Gibson NL. 1998. Indentification and phylogeny of spore-cyst fungi (Ascosphaera spp.) using ribosomal DNA sequences. Mycol. Res. 102(5):541-547.</a> \n \n
+        <a href="https://www.hgsc.bcm.edu/sites/default/files/images/Ident.A.apis_DNAsegue.pdf">Anderson DL, Gibbs AJ, and Gibson NL. 1998. Indentification
+            and phylogeny of spore-cyst fungi (Ascosphaera spp.) using ribosomal DNA sequences. Mycol. Res. 102(5):541-547.</a> \n \n
 
-        <a href="https://pubmed.ncbi.nlm.nih.gov/8441766/?dopt=Abstract">Qin H, Welker DL, Youssef NN. 1993. Isolation and characterization of a linear plasmid from the entomopathogenic fungus Ascosphaera apis. Plasmid. 29(1):19-30.</a> \n \n
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8441766/?dopt=Abstract">Qin H, Welker DL, Youssef NN. 1993. Isolation and characterization of a linear
+            plasmid from the entomopathogenic fungus Ascosphaera apis. Plasmid. 29(1):19-30.</a> \n \n
 
-        <a href="https://pubmed.ncbi.nlm.nih.gov/10950136/?dopt=Abstract">Williams DL. 2000. A Veterinary Approach to the European Honey Bee (Apis mellifera). The Veterinary Journal. 160:61?7.</a> \n \n
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10950136/?dopt=Abstract">Williams DL. 2000. A Veterinary Approach to the European Honey Bee (Apis mellifera).
+            The Veterinary Journal. 160:61?7.</a> \n \n
 
-        <a href="https://www.hgsc.bcm.edu/sites/default/files/images/review_Chalkb.pdf">Michael Hornitzky. 2001. Literature review of chalkbrood?a fungal disease of honeybees.(Rural Industries Research and Development Corporation).</a></string>
+        <a href="https://www.hgsc.bcm.edu/sites/default/files/images/review_Chalkb.pdf">Michael Hornitzky. 2001. Literature review of chalkbrood?a fungal disease
+            of honeybees.(Rural Industries Research and Development Corporation).</a></string>
     <string name="queenbee_man_info">description</string>
     <string name="brood_frame_info">description</string>
     <string name="honey_frame_info">description</string>

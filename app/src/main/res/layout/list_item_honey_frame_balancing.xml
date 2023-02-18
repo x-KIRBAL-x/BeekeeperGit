@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="@{() -> clickListener.onClick(beehive)}"
-        android:background="@drawable/my_border">
+        android:background="@drawable/linear_list_item_background">
 
         <TextView
             android:id="@+id/beehive_item_name"
