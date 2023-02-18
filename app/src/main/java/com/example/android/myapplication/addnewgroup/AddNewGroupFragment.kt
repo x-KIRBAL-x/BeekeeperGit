@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -54,6 +55,24 @@ class AddNewGroupFragment : Fragment() {
 
             }
         })
+
+        binding.newGroupName.doOnTextChanged { text, start, before, count ->
+            if (text!!.length > 9){
+                binding.beegroupnamelayout.error = "No More!"
+            }
+            else if (text.length <= 9){
+                binding.beegroupnamelayout.error = null
+            }
+        }
+
+        binding.newGroupLocation.doOnTextChanged { text, start, before, count ->
+            if (text!!.length > 20){
+                binding.groupLocationLayout.error = "No More!"
+            }
+            else if(text.length <= 20){
+                binding.groupLocationLayout.error = null
+            }
+        }
 
         return binding.root
     }

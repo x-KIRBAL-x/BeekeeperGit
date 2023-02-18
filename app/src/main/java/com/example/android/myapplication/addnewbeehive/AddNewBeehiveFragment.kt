@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -59,6 +60,24 @@ class AddNewBeehiveFragment : Fragment(){
                 }
             }
         })
+
+        binding.newBeehiveName.doOnTextChanged { text, start, before, count ->
+            if (text!!.length > 6){
+                binding.beenamelayout.error = "No More!"
+            }
+            else if (text.length <=6){
+                binding.beenamelayout.error = null
+            }
+        }
+
+        binding.queenbeeAge.doOnTextChanged { text, start, before, count ->
+            if (text!!.length > 4){
+                binding.beeyearlayout.error = "No More!"
+            }
+            else if (text.length <= 4){
+                binding.beeyearlayout.error = null
+            }
+        }
 
         return binding.root
     }

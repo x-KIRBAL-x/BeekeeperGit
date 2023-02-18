@@ -21,7 +21,7 @@
             android:hint="Bee hive name"
             app:counterEnabled="true"
             app:helperText="Required*"
-            app:counterMaxLength="10"
+            app:counterMaxLength="6"
             app:startIconDrawable="@drawable/bee_name_input"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
             android:id="@+id/new_beehive_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="10"
+            android:maxLength="7"
             />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:maxLength="4"
+                android:maxLength="5"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
