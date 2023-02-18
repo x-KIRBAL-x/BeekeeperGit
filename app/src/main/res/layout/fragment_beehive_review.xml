@@ -16,7 +16,7 @@
         <ScrollView
             android:id="@+id/review_scroll"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
                 <LinearLayout
                     android:id="@+id/queenbee_year_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/padding_sixty"
+                    android:layout_height="90dp"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toTopOf="@+id/first"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/padding_sixty">
+                        android:layout_height="90dp">
 
                         <TextView
                             android:id="@+id/queenbee_year"
@@ -51,17 +51,28 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <EditText
-                            android:id="@+id/queenbee_year_edit"
-                            android:layout_width="wrap_content"
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:id="@+id/group_location_layout"
+                            android:layout_width="90dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="50dp"
-                            android:inputType="number"
+                            android:layout_marginEnd="@dimen/margin_end"
                             android:textAlignment="center"
-                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="4"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:QueenbeeYearEdit="@{beehiveReviewViewModel.beehive}"/>
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/queenbee_year_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:textAlignment="center"
+                                app:QueenbeeYearEdit="@{beehiveReviewViewModel.beehive}"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
 

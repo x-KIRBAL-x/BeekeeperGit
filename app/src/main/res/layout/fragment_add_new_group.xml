@@ -16,39 +16,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/new_group_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Name"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/new_group_location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/beegroupnamelayout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Group name"
+            app:counterEnabled="true"
+            app:helperText="Required*"
+            app:counterMaxLength="10"
+            app:startIconDrawable="@drawable/house"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/group_location_layout"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_group_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/new_group_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Location"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/new_group_done"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/new_group_name" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/group_location_layout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Group location"
+            app:counterEnabled="true"
+            app:helperText="Required*"
+            app:counterMaxLength="15"
+            app:startIconDrawable="@drawable/location_pin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/new_group_done"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_group_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="15"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
     <Button
             android:id="@+id/new_group_done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Done"
-            app:layout_constraintTop_toBottomOf="@id/new_group_location"
+            app:layout_constraintTop_toBottomOf="@id/group_location_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
