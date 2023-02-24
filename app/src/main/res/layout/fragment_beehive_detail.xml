@@ -37,8 +37,47 @@
             app:layout_constraintTop_toBottomOf="@id/beehive_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/queenbee_age_date"
+            app:layout_constraintBottom_toTopOf="@id/queenbee_color_layout"
             app:LastReview="@{beehiveDetailViewModel.beehive}"/>
+
+        <LinearLayout
+            android:id="@+id/queenbee_color_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/queenbee_age_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beehive_last_review">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/queenbee_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start"
+                android:text="Queenbee Color: "
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/queenbee_color_img"/>
+
+            <ImageView
+                android:id="@+id/queenbee_color_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end"
+                app:layout_constraintStart_toEndOf="@id/queenbee_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:QueenBeeColor="@{beehiveDetailViewModel.beehive}"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
         <TextView
             android:id="@+id/queenbee_age_date"
@@ -50,7 +89,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/beehive_last_review"
+            app:layout_constraintTop_toBottomOf="@id/queenbee_color_layout"
             app:QueenBeeAge="@{beehiveDetailViewModel.beehive}"/>
 
         <Button
@@ -77,6 +116,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             />
+
+        <ImageButton
+            android:id="@+id/beehive_renane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:onClick="@{()->beehiveDetailViewModel.clickOnEditButton()}"
+            android:src="@drawable/edit_icon"
+            android:backgroundTint="@color/orange_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/beehive_delete"

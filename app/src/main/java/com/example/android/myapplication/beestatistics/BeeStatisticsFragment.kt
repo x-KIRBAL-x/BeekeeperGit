@@ -18,10 +18,7 @@ import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.utils.ColorTemplate
-import java.text.SimpleDateFormat
-import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.math.absoluteValue
 
 class BeeStatisticsFragment: Fragment() {
     private lateinit var ourPieChart: PieChart
@@ -64,8 +61,8 @@ class BeeStatisticsFragment: Fragment() {
 
         populatePieChart(population,populationname)
         queenBeeAgeBarChart(queenBeeAge)
-        binding.requiredQueenbee.text = beeStatisticsViewModel.getAllBadQueenbee().toString() + " / "
-        binding.sumQueenbee.text = beeStatisticsViewModel.getAllQueenbee().toString() + " "
+        binding.requiredQueenbee.text = beeStatisticsViewModel.getAllBadQueenbee().toString()
+        binding.sumHive.text = beeStatisticsViewModel.getAllHive().toString()
 
         return binding.root
     }

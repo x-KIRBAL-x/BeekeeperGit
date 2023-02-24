@@ -8,6 +8,8 @@
     <string name="five">Very good</string>
     <string name="one_quantity">Few</string>
     <string name="two_quantity">Enough</string>
+    <string name="group_name"><b>Group name:</b>\ \ \ \ \ </string>
+    <string name="group_location">Group location:\ </string>
     <string name="three_quantity">Much</string>
     <string name="ascosphaera_apis_and_nosema">Ascosphaera apis and Nosema</string>
     <string name="ascosphaera_apis">Ascosphaera apis</string>

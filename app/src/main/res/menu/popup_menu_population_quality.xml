@@ -3,17 +3,22 @@
 
     <item
         android:id="@+id/popUpMenuQuality_One"
+        android:icon="@drawable/p_very_bad"
         android:title="@string/one"/>
     <item
         android:id="@+id/popUpMenuQuality_Two"
+        android:icon="@drawable/p_bad"
         android:title="@string/two"/>
     <item
         android:id="@+id/popUpMenuQuality_Three"
+        android:icon="@drawable/p_mid"
         android:title="@string/three" />
     <item
         android:id="@+id/popUpMenuQuality_Four"
+        android:icon="@drawable/p_good"
         android:title="@string/four"/>
     <item
         android:id="@+id/popUpMenuQuality_Five"
+        android:icon="@drawable/p_very_good"
         android:title="@string/five" />
 </menu>

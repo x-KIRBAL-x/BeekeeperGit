@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/popUpMenuQuality_Zero"
+        android:icon="@drawable/queenless"
         android:title="@string/zero"/>
     <item
         android:id="@+id/popUpMenuQuality_One"
+        android:icon="@drawable/very_bad"
         android:title="@string/one"/>
     <item
         android:id="@+id/popUpMenuQuality_Two"
+        android:icon="@drawable/bad"
         android:title="@string/two"/>
     <item
         android:id="@+id/popUpMenuQuality_Three"
+        android:icon="@drawable/mid"
         android:title="@string/three" />
     <item
         android:id="@+id/popUpMenuQuality_Four"
+        android:icon="@drawable/good"
         android:title="@string/four" />
     <item
         android:id="@+id/popUpMenuQuality_Five"
+        android:icon="@drawable/very_good"
         android:title="@string/five" />
 </menu>

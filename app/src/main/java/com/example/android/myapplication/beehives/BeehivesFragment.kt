@@ -59,7 +59,7 @@ class BeehivesFragment : Fragment() {
 
         beeHivesViewModel.navigateToAddNewBeehiveFragment.observe(this, Observer {
             beehive -> beehive?.let {
-                this.findNavController().navigate(BeehivesFragmentDirections.actionBeehivesFragmentToAddNewBeehiveFragment(arguments.beeGroupKey,beehive.beehiveId))
+                this.findNavController().navigate(BeehivesFragmentDirections.actionBeehivesFragmentToAddNewBeehiveFragment(arguments.beeGroupKey,beehive.beehiveId,1))
             beeHivesViewModel.doneNavigateToAddNewBeehiveFragment()
         }
         })
@@ -76,7 +76,13 @@ class BeehivesFragment : Fragment() {
             this.findNavController().navigate(BeehivesFragmentDirections.actionBeehivesFragmentToBeehiveDetailFragment(beehive,arguments.beeGroupKey))
             beeHivesViewModel.doneNavigateToBeeDetailFragment()
         }
+        })
 
+        beeHivesViewModel.navigateToAddNewGroupFragment.observe(this, Observer {
+            if (it==true){
+                this.findNavController().navigate(BeehivesFragmentDirections.actionBeehivesFragmentToAddNewGroupFragment(arguments.beeGroupKey, 2))
+                beeHivesViewModel.doneNavigateToAddNewGroupFragment()
+            }
         })
 
         val manager = GridLayoutManager(activity, 3, GridLayoutManager.VERTICAL,false)

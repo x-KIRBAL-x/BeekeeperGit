@@ -76,5 +76,5 @@ interface BeeDatabaseDao {
     fun getAllBadQueenBee(groupkey: Long, year: Int): Int?
 
     @Query("SELECT COUNT(*) FROM beehive_table WHERE group_id=:groupkey")
-    fun getAllQueenbee(groupkey: Long): Int?
+    fun getAllHive(groupkey: Long): Int?
 }

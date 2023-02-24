@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -56,8 +57,16 @@ class BeehiveDetailFragment : Fragment() {
 
         beehiveDetailViewModel.navigateToBeehiveReviewFragment.observe(this, Observer {
             if (it==true){
-                this.findNavController().navigate(BeehiveDetailFragmentDirections.actionBeehiveDetailFragmentToBeehiveReviewFragment(arguments.beehivekey,arguments.beeGroupKey,0))
+                this.findNavController().navigate(BeehiveDetailFragmentDirections.actionBeehiveDetailFragmentToBeehiveReviewFragment(arguments.beehivekey, arguments.beeGroupKey,0))
                 beehiveDetailViewModel.doneNavigateToBeehiveReviewFragment()
+            }
+        })
+
+        beehiveDetailViewModel.navigateToAddNewBeehiveFragment.observe(this, Observer {
+            if (it!=null){
+                Toast.makeText(context,"${arguments.beehivekey} ${arguments.beeGroupKey}",Toast.LENGTH_SHORT).show()
+                this.findNavController().navigate(BeehiveDetailFragmentDirections.actionBeehiveDetailFragmentToAddNewBeehiveFragment(arguments.beeGroupKey, arguments.beehivekey,2))
+                beehiveDetailViewModel.doneNavigateToAddNewBeehiveFragment()
             }
         })
         return binding.root

@@ -27,6 +27,7 @@ class BeehiveDetailViewModel(
         private val _navigateToBeehivesFragment = MutableLiveData<Boolean?>()
         private val _navgateToBeehiveDeleteFragment = MutableLiveData<Boolean?>()
         private val _navigateToBeehiveReviewFragment = MutableLiveData<Boolean?>()
+        private val _navigateToAddNewBeehiveFragment = MutableLiveData<Long?>()
 
 
         val navigateToBeehivesFragment: LiveData<Boolean?>
@@ -35,6 +36,8 @@ class BeehiveDetailViewModel(
                 get() = _navgateToBeehiveDeleteFragment
         val navigateToBeehiveReviewFragment: LiveData<Boolean?>
                 get() = _navigateToBeehiveReviewFragment
+        val navigateToAddNewBeehiveFragment: LiveData<Long?>
+                get() = _navigateToAddNewBeehiveFragment
 
         fun doneNavigateToBeehivesFragment(){
                 _navigateToBeehivesFragment.value= null
@@ -60,4 +63,15 @@ class BeehiveDetailViewModel(
                 _navigateToBeehiveReviewFragment.value = true
         }
 
+       /* fun clickOnEditButton(){
+                _navigateToAddNewBeehiveFragment.value = true
+        }*/
+
+        fun doneNavigateToAddNewBeehiveFragment(){
+                _navigateToAddNewBeehiveFragment.value=null
+        }
+
+        fun clickOnEditButton() {
+                _navigateToAddNewBeehiveFragment.value = beehiveKey
+        }
 }

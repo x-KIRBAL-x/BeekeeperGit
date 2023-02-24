@@ -9,7 +9,8 @@ import com.example.android.myapplication.database.BeeGroup
 import kotlinx.coroutines.launch
 
 class AddNewGroupViewModel(dataSource: BeeDatabaseDao,
-                           private val groupKey: Long) : ViewModel(){
+                           private val groupKey: Long,
+                           private val navi: Long) : ViewModel(){
 
     val database = dataSource
 
@@ -21,9 +22,9 @@ class AddNewGroupViewModel(dataSource: BeeDatabaseDao,
           group = database.getGroupWithId(groupKey)
     }
 
-    private val _clickDoneButton = MutableLiveData<Boolean?>()
+    private val _clickDoneButton = MutableLiveData<Int?>()
 
-    val clickDoneButton: LiveData<Boolean?>
+    val clickDoneButton: LiveData<Int?>
         get() = _clickDoneButton
 
     fun doneNavigatingToGroupsFragment(){
@@ -31,7 +32,7 @@ class AddNewGroupViewModel(dataSource: BeeDatabaseDao,
     }
 
     fun clickDoneButton(){
-        _clickDoneButton.value=true
+        _clickDoneButton.value=navi.toInt()
     }
 
     fun setvalue(nev: String, hely: String){

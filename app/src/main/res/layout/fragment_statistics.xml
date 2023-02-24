@@ -60,7 +60,7 @@
                 app:layout_constraintTop_toBottomOf="@id/population"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/required_qeenbee_text">
+                app:layout_constraintBottom_toTopOf="@id/queen_info">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,6 +74,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
             </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/queen_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/queenbee_age"
+            app:layout_constraintBottom_toTopOf="@id/all_hive">
         <TextView
             android:id="@+id/required_qeenbee_text"
             android:layout_width="wrap_content"
@@ -81,7 +87,7 @@
             android:text="Required new queenbee:"
             android:textSize="14sp"
             android:layout_marginStart="@dimen/margin_start"
-            app:layout_constraintTop_toBottomOf="@id/queenbee_age"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
         <TextView
@@ -89,18 +95,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-
-            app:layout_constraintTop_toBottomOf="@id/queenbee_age"
-            app:layout_constraintEnd_toStartOf="@id/sum_queenbee"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-        <TextView
-            android:id="@+id/sum_queenbee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            app:layout_constraintTop_toTopOf="@id/required_queenbee"
+            android:layout_marginEnd="@dimen/margin_end"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/required_queenbee_info"
-            app:layout_constraintBottom_toBottomOf="@id/required_queenbee"/>
+            app:layout_constraintBottom_toBottomOf="parent"/>
         <Button
             android:id="@+id/required_queenbee_info"
             android:layout_width="@dimen/info_button_width"
@@ -108,9 +106,38 @@
             android:text="\?"
             android:textAlignment="center"
             android:layout_marginEnd="@dimen/margin_end"
-            app:layout_constraintTop_toTopOf="@id/sum_queenbee"
+            app:layout_constraintTop_toTopOf="@id/required_queenbee"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/sum_queenbee"/>
+            app:layout_constraintBottom_toBottomOf="@id/required_queenbee"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/all_hive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/queen_info"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <TextView
+                android:id="@+id/all_hive_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hive (Total):"
+                android:textSize="14sp"
+                android:layout_marginStart="@dimen/margin_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/sum_hive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:text="15"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

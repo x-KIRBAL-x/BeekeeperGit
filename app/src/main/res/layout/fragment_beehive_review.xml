@@ -58,7 +58,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/margin_end"
                             android:textAlignment="center"
-                            app:startIconDrawable="@drawable/year_30_30"
+                            app:startIconDrawable="@drawable/year_20_20"
                             app:hintEnabled="true"
                             app:counterEnabled="true"
                             app:counterMaxLength="4"
@@ -77,6 +77,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:id="@+id/first"
@@ -321,7 +322,7 @@
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:textAlignment="center"
-                                app:BroodframeNumber="@{beehiveReviewViewModel.beehive}"/>
+                                app:HoneyframeNumber="@{beehiveReviewViewModel.beehive}"/>
                         </com.google.android.material.textfield.TextInputLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>

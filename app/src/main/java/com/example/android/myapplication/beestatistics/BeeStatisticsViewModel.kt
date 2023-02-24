@@ -39,8 +39,8 @@ class BeeStatisticsViewModel(
         }
     }
 
-    fun getAllQueenbee(): Int{
-        val count: Int? = database.getAllQueenbee(groupKey)
+    fun getAllHive(): Int{
+        val count: Int? = database.getAllHive(groupKey)
         return if(count==null){
             0
         } else{

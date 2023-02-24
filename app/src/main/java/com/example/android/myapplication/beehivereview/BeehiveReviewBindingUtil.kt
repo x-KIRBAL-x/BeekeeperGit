@@ -1,9 +1,11 @@
 package com.example.android.myapplication.beehivereview
 
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
+import com.example.android.myapplication.R
 import com.example.android.myapplication.convertNumericQualityToString
 import com.example.android.myapplication.convertNumericQuantityToString
 import com.example.android.myapplication.database.Beehive
@@ -81,3 +83,5 @@ fun Switch.setMeszesValue(item: Beehive?){
         isChecked = item.AscosphaeraApis==10
     }
 }
+
+

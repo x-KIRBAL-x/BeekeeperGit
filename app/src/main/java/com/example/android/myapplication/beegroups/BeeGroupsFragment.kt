@@ -63,7 +63,7 @@ class BeeGroupsFragment : Fragment() {
 
         beeGroupsViewModel.navigateToAddNewGroupFragment.observe(this, Observer {
             group -> group?.let{
-                this.findNavController().navigate(BeeGroupsFragmentDirections.actionBeeGroupsFragmentToAddNewGroupFragment(group.groupId))
+                this.findNavController().navigate(BeeGroupsFragmentDirections.actionBeeGroupsFragmentToAddNewGroupFragment(group.groupId,1))
                 beeGroupsViewModel.doneNavigatingAddNewGroup()
             }
         })

@@ -31,7 +31,7 @@ class AddNewGroupFragment : Fragment() {
         val arguments = AddNewGroupFragmentArgs.fromBundle(requireArguments())
 
         val dataSource = BeeDatabase.getInstance(application).beeDatabaseDao
-        val viewModelFactory = AddNewGroupViewModelFactory(dataSource,arguments.groupKey)
+        val viewModelFactory = AddNewGroupViewModelFactory(dataSource,arguments.groupKey,arguments.navi)
 
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
@@ -42,12 +42,24 @@ class AddNewGroupFragment : Fragment() {
         binding.addNewGroupViewModel = addNewGroupViewModel
 
         addNewGroupViewModel.clickDoneButton.observe(this, Observer {
-            if (it==true) {
+            if (it!=null) {
                         if( binding.newGroupName.text.toString() != "" && binding.newGroupLocation.text.toString() != ""){
-                        addNewGroupViewModel.setvalue(binding.newGroupName.text.toString(),binding.newGroupLocation.text.toString())
-                            this.findNavController()
-                            .navigate(AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeeGroupsFragment())
-                            addNewGroupViewModel.doneNavigatingToGroupsFragment()
+                            if(it==1) {
+                                addNewGroupViewModel.setvalue(
+                                    binding.newGroupName.text.toString(),
+                                    binding.newGroupLocation.text.toString()
+                                )
+                                this.findNavController()
+                                    .navigate(AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeeGroupsFragment())
+                                addNewGroupViewModel.doneNavigatingToGroupsFragment()
+                            }
+                            if (it==2){
+                                addNewGroupViewModel.setvalue(
+                                    binding.newGroupName.text.toString(),
+                                    binding.newGroupLocation.text.toString())
+                                this.findNavController().navigate(AddNewGroupFragmentDirections.actionAddNewGroupFragmentToBeehivesFragment(arguments.groupKey))
+                                addNewGroupViewModel.doneNavigatingToGroupsFragment()
+                            }
                     }
                     else{
                         Toast.makeText(application,"Please fill in all fields!",Toast.LENGTH_SHORT).show()
@@ -57,10 +69,10 @@ class AddNewGroupFragment : Fragment() {
         })
 
         binding.newGroupName.doOnTextChanged { text, start, before, count ->
-            if (text!!.length > 9){
+            if (text!!.length > 10){
                 binding.beegroupnamelayout.error = "No More!"
             }
-            else if (text.length <= 9){
+            else if (text.length <= 10){
                 binding.beegroupnamelayout.error = null
             }
         }

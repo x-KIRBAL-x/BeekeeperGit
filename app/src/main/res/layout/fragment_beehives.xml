@@ -25,6 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/delete_group"
+            app:layout_constraintBottom_toTopOf="@id/edit_group"
             />
 
         <Button
@@ -38,25 +39,38 @@
             app:layout_constraintTop_toTopOf="parent"
             />
 
+
+        <ImageButton
+            android:id="@+id/edit_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_icon"
+            android:onClick="@{() -> beehivesViewModel.navigateToAddNewGroupFragment()}"
+            android:layout_marginStart="12dp"
+            android:backgroundTint="@color/orange_500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_new_hive"
+            app:layout_constraintBottom_toTopOf="@id/beehives_list"
+            />
+
         <TextView
             android:id="@+id/beegroup_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_start"
-            android:layout_marginTop="@dimen/margin_top"
-            app:layout_constraintBottom_toTopOf="@id/beegroup_location"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/add_new_hive"
-            app:BeeGroupName="@{beehivesViewModel.beeGroup}"/>
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            app:BeeGroupName="@{beehivesViewModel.beeGroup}"
+            app:layout_constraintStart_toEndOf="@id/edit_group"
+            app:layout_constraintTop_toBottomOf="@id/add_new_hive" />
 
         <TextView
             android:id="@+id/beegroup_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@id/beehives_list"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/beegroup_name"
+            app:layout_constraintStart_toEndOf="@id/edit_group"
             app:BeeGroupLocation="@{beehivesViewModel.beeGroup}"/>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -66,8 +80,7 @@
             app:layout_constraintBottom_toTopOf="@id/close"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/beegroup_location" />
-
+            app:layout_constraintTop_toBottomOf="@id/edit_group" />
 
         <Button
             android:id="@+id/close"
@@ -80,7 +93,6 @@
             app:layout_constraintTop_toBottomOf="@id/beehives_list"
             app:layout_constraintBottom_toBottomOf="parent"
             />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

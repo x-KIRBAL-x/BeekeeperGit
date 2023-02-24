@@ -24,14 +24,14 @@ fun TextView.setBeehiveNameListItem(item: Beehive?){
 @BindingAdapter("BeeGroupName")
 fun TextView.setBeeGroupName(item: BeeGroup?){
     item?.let {
-        text = "Group name:     " + item.groupNev
+        text = resources.getString(R.string.group_name) + item.groupNev
     }
 }
 
 @BindingAdapter("BeeGroupLocation")
 fun TextView.setBeeGroupLocation(item: BeeGroup?){
     item?.let {
-        text = "Group location: " + item.groupHely
+        text = resources.getString(R.string.group_location) + item.groupHely
     }
 }
 

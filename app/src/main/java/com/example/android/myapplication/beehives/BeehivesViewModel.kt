@@ -17,6 +17,7 @@ class BeehivesViewModel(private val beeGroupKey: Long = 0L,
     private val _navigateToAddNewBeehiveFragment = MutableLiveData<Beehive?>()
     private val _navigateToGroupDeleteFragment = MutableLiveData<Boolean?>()
     private val _navigateToBeeDetailFragment = MutableLiveData<Long>()
+    private val _navigateToAddNewGroupFragment = MutableLiveData<Boolean?>()
 
     val database = dataSource
 
@@ -42,6 +43,9 @@ class BeehivesViewModel(private val beeGroupKey: Long = 0L,
     val navigateToBeeDetailFragment
         get() = _navigateToBeeDetailFragment
 
+    val navigateToAddNewGroupFragment: LiveData<Boolean?>
+        get() = _navigateToAddNewGroupFragment
+
 
     fun doneNavigateToBeeGroupsFragment(){
         _navigateToBeeGroupsFragment.value = null
@@ -65,6 +69,14 @@ class BeehivesViewModel(private val beeGroupKey: Long = 0L,
 
     fun navigateToGroupDeleteFragment(){
         _navigateToGroupDeleteFragment.value = true
+    }
+
+    fun navigateToAddNewGroupFragment(){
+        _navigateToAddNewGroupFragment.value=true
+    }
+
+    fun doneNavigateToAddNewGroupFragment(){
+        _navigateToAddNewGroupFragment.value=null
     }
 
     fun clickOnClose(){
