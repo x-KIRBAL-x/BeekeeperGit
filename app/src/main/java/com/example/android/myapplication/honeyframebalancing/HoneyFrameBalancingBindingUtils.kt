@@ -14,10 +14,17 @@ fun TextView.setBeeName(item: Beehive?){
     }
 }
 
-@BindingAdapter("BeehiveHoneyFrameNumber")
-fun TextView.setBroodFrameNumber(item: Beehive?){
+@BindingAdapter("BeehiveHoneyQuantity")
+fun TextView.setHoneyQuantity(item: Beehive?){
     item?.let {
         text = "Honeyframe quantity: " + convertNumericQuantityToString(item.honeyFrame,context.resources)
+    }
+}
+
+@BindingAdapter("BeehiveHoneyFrameNumber")
+fun TextView.setHoneyFrameNumber(item: Beehive?){
+    item?.let {
+        text = "Honeyframe number: " + item.honeyFrameNumber.toString()
     }
 }
 

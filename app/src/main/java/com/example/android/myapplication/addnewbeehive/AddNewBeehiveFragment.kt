@@ -53,7 +53,7 @@ class AddNewBeehiveFragment : Fragment(){
                     addNewBeehiveViewModel.donenavigating()
                         }
                         if(it==2){
-                           // Toast.makeText(context,"${arguments.beehiveKey} ${arguments.beeGroupKey}",Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context,"${arguments.beehiveKey} ${arguments.beeGroupKey}",Toast.LENGTH_SHORT).show()
                             addNewBeehiveViewModel.updateBeehive(binding.newBeehiveName.text.toString(),queenYear)
                             this.findNavController().navigate(AddNewBeehiveFragmentDirections.actionAddNewBeehiveFragmentToBeehiveDetailFragment(arguments.beehiveKey,arguments.beeGroupKey))
                             addNewBeehiveViewModel.donenavigating()

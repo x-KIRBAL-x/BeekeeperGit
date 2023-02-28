@@ -24,7 +24,7 @@ fun TextView.setSwarmingBeesPopulation(item: Beehive?){
 @BindingAdapter("SwarmingBeesBroodframeNumber")
 fun TextView.setBroodframeNumber(item: Beehive?){
     item?.let {
-        text = "Broodframe number: " + item.broodFrameNumber
+        text = "Broodframe number: " + item.broodFrameNumber.toString()
     }
 }
 

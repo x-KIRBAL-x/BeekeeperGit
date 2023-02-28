@@ -13,8 +13,6 @@
 
     </data>
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,31 +21,40 @@
 
         <TextView
             android:id="@+id/beehive_item_name"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="130dp"
+            android:textSize="@dimen/list_item_text_size"
             app:HoneyFrameBalanceName="@{beehive}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/beehive_item_img" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/beehive_item_text"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginStart="16dp"
+            android:id="@+id/beehive_honey_quantity"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="130dp"
-            app:BeehiveHoneyFrameNumber="@{beehive}"
+            android:textSize="@dimen/list_item_text_size"
+            app:BeehiveHoneyQuantity="@{beehive}"
             app:layout_constraintEnd_toEndOf="@id/beehive_item_name"
             app:layout_constraintStart_toStartOf="@id/beehive_item_name"
             app:layout_constraintTop_toBottomOf="@id/beehive_item_name" />
+
+        <TextView
+            android:id="@+id/beehive_honeyframe_number"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/list_item_text_size"
+            app:BeehiveHoneyFrameNumber="@{beehive}"
+            app:layout_constraintEnd_toEndOf="@id/beehive_honey_quantity"
+            app:layout_constraintStart_toStartOf="@id/beehive_honey_quantity"
+            app:layout_constraintTop_toBottomOf="@id/beehive_honey_quantity" />
 
         <ImageView
             android:id="@+id/beehive_item_img"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:HoneyFrameBalanceImage="@{beehive}"
