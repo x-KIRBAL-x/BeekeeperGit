@@ -28,8 +28,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/brood_frame_list"
             android:layout_width="0dp"
@@ -37,8 +35,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/close"
             app:layout_constraintTop_toBottomOf="@+id/brood_frame_balancing_info"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent"/>
+
         <Button
             android:id="@+id/close"
             android:layout_width="wrap_content"

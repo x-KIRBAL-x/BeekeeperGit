@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="beehive"
+            type="com.example.android.myapplication.database.Beehive"/>
+        <variable
+            name="clickListener"
+            type="com.example.android.myapplication.swarmingbees.SwarmingBeesClickListener"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(beehive)}"
+        android:background="@drawable/linear_list_item_background">
+
+        <TextView
+            android:id="@+id/beehive_item_name"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
+            android:layout_marginStart="10dp"
+            android:textSize="@dimen/list_item_text_size"
+            app:SwarmingBeesName="@{beehive}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/beehive_population"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/list_item_text_size"
+            app:SwarmingBeesPopulation="@{beehive}"
+            app:layout_constraintEnd_toEndOf="@id/beehive_item_name"
+            app:layout_constraintStart_toStartOf="@id/beehive_item_name"
+            app:layout_constraintTop_toBottomOf="@id/beehive_item_name" />
+
+        <TextView
+            android:id="@+id/beehive_brood_frame_number"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/list_item_text_size"
+            app:SwarmingBeesBroodframeNumber="@{beehive}"
+            app:layout_constraintEnd_toEndOf="@id/beehive_population"
+            app:layout_constraintStart_toStartOf="@id/beehive_population"
+            app:layout_constraintTop_toBottomOf="@id/beehive_population" />
+
+        <ImageView
+            android:id="@+id/beehive_item_img"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:SwarmingBeesImg="@{beehive}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/beehive_item_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

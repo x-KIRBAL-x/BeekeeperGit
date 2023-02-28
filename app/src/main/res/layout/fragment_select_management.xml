@@ -52,30 +52,41 @@
                             android:text="QueenBee"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/broodframe_balance_button"
-                            app:layout_constraintBottom_toTopOf="@id/honeyframe_balance_button"/>
+                            app:layout_constraintEnd_toStartOf="@id/broodframe_balance"
+                            app:layout_constraintBottom_toTopOf="@id/honeyframe_balance"/>
 
                         <Button
-                            android:id="@+id/broodframe_balance_button"
+                            android:id="@+id/broodframe_balance"
                             android:layout_width="160dp"
                             android:layout_height="160dp"
                             android:onClick="@{() -> beeManagementViewModel.clickOnBroodFrameBalancingButton()}"
                             android:text="brood \n frame \n balancing"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toEndOf="@id/manage_qeenbee"
-                            app:layout_constraintBottom_toTopOf="@id/statistics"
+                            app:layout_constraintBottom_toTopOf="@id/swarming_bees"
                             app:layout_constraintEnd_toEndOf="parent"/>
 
                         <Button
-                            android:id="@+id/honeyframe_balance_button"
+                            android:id="@+id/honeyframe_balance"
                             android:layout_width="160dp"
                             android:layout_height="160dp"
                             android:text="Honey \n frame \n balancing"
                             android:onClick="@{() -> beeManagementViewModel.clickOnHoneyFrameBalancingButton()}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/manage_qeenbee"
-                            app:layout_constraintEnd_toStartOf="@id/statistics"
+                            app:layout_constraintEnd_toStartOf="@id/swarming_bees"
                             app:layout_constraintBottom_toTopOf="@id/sick_beehives"/>
+
+                        <Button
+                            android:id="@+id/swarming_bees"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:text="Swarming \n Bees"
+                            android:onClick="@{()-> beeManagementViewModel.clickOnSwarmingBeesButton()}"
+                            app:layout_constraintTop_toBottomOf="@id/broodframe_balance"
+                            app:layout_constraintStart_toEndOf="@id/honeyframe_balance"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/statistics"/>
 
                         <Button
                             android:id="@+id/statistics"
@@ -83,10 +94,10 @@
                             android:layout_height="160dp"
                             android:text="Statistics"
                             android:onClick="@{()-> beeManagementViewModel.clickOnStatisticsButton()}"
-                            app:layout_constraintTop_toBottomOf="@id/broodframe_balance_button"
-                            app:layout_constraintStart_toEndOf="@id/honeyframe_balance_button"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/sick_beehives"/>
+                            app:layout_constraintTop_toBottomOf="@id/swarming_bees"
+                            app:layout_constraintStart_toStartOf="@id/swarming_bees"
+                            app:layout_constraintEnd_toEndOf="@id/swarming_bees"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <Button
                             android:id="@+id/sick_beehives"
@@ -94,9 +105,9 @@
                             android:layout_height="160dp"
                             android:text="Sick \n beehives"
                             android:onClick="@{() -> beeManagementViewModel.clickOnSickBeesButton()}"
-                            app:layout_constraintTop_toBottomOf="@id/honeyframe_balance_button"
-                            app:layout_constraintStart_toStartOf="@id/honeyframe_balance_button"
-                            app:layout_constraintEnd_toEndOf="@id/honeyframe_balance_button"
+                            app:layout_constraintTop_toBottomOf="@id/honeyframe_balance"
+                            app:layout_constraintStart_toStartOf="@id/honeyframe_balance"
+                            app:layout_constraintEnd_toEndOf="@id/honeyframe_balance"
                             app:layout_constraintBottom_toBottomOf="parent"/>
 
 
@@ -114,12 +125,12 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/Option_linear_layout"
                     app:layout_constraintBottom_toBottomOf="parent">
-                <Button
-                    android:id="@+id/close"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="@{() -> beeManagementViewModel.clickOnCloseButton()}"
-                    android:text="Close" />
+                    <Button
+                        android:id="@+id/close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{() -> beeManagementViewModel.clickOnCloseButton()}"
+                        android:text="Close" />
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

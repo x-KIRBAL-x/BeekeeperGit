@@ -8,4 +8,7 @@
     <dimen name="margin_top">24dp</dimen>
     <dimen name="info_button_width">40dp</dimen>
     <dimen name="review_button_width">105dp</dimen>
+    <dimen name="list_item_content_width">250dp</dimen>
+    <dimen name="list_item_content_height">30dp</dimen>
+    <dimen name="list_item_text_size">17sp</dimen>
 </resources>

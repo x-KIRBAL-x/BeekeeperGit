@@ -57,6 +57,13 @@ class BeeManagementFragment: Fragment() {
             }
         })
 
+        beeManagementViewModel.navigateToSwarmingBeesFragment.observe(this, Observer {
+            if(it==true){
+                this.findNavController().navigate(BeeManagementFragmentDirections.actionBeeManagementFragmentToSwarmingBees(arguments.groupkey))
+                beeManagementViewModel.doneNavigateToSwarmingBeesFragment()
+            }
+        })
+
         beeManagementViewModel.navigateToSickBeesFragment.observe(this, Observer {
             if (it==true){
                 this.findNavController().navigate(BeeManagementFragmentDirections.actionBeeManagementFragmentToSickBees(arguments.groupkey))

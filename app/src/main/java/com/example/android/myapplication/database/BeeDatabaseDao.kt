@@ -77,4 +77,7 @@ interface BeeDatabaseDao {
 
     @Query("SELECT COUNT(*) FROM beehive_table WHERE group_id=:groupkey")
     fun getAllHive(groupkey: Long): Int?
+
+    @Query("SELECT * FROM beehive_table WHERE group_id = :groupkey AND beehive_population > 3 AND brood_frame > 2")
+    fun getSwarmingBees(groupkey: Long): LiveData<List<Beehive>>
 }

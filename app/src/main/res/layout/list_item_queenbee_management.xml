@@ -21,21 +21,20 @@
 
         <TextView
             android:id="@+id/beehive_item_name"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="130dp"
+            android:textSize="@dimen/list_item_text_size"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:QueenBeeName="@{beehive}"/>
 
         <TextView
             android:id="@+id/queenbee_condition"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="130dp"
+            android:textSize="@dimen/list_item_text_size"
             app:layout_constraintEnd_toEndOf="@id/beehive_item_name"
             app:layout_constraintStart_toStartOf="@id/beehive_item_name"
             app:layout_constraintTop_toBottomOf="@id/beehive_item_name"
@@ -43,11 +42,10 @@
 
         <TextView
             android:id="@+id/queenbee_age_number"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="@dimen/list_item_content_width"
+            android:layout_height="@dimen/list_item_content_height"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="130dp"
+            android:textSize="@dimen/list_item_text_size"
             app:layout_constraintStart_toStartOf="@id/queenbee_condition"
             app:layout_constraintEnd_toEndOf="@id/queenbee_condition"
             app:layout_constraintTop_toBottomOf="@id/queenbee_condition"
@@ -58,7 +56,6 @@
             android:id="@+id/beehive_item_img"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"

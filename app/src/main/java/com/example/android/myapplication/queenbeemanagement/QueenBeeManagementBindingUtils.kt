@@ -17,20 +17,20 @@ fun ImageView.setQueenBeeimage(item: Beehive?){
 @BindingAdapter("QueenBeeName")
 fun TextView.setBeehiveName(item: Beehive?){
     item?.let {
-        text = item.beehiveName
+        text = "Beehive Name: " +  item.beehiveName
     }
 }
 
 @BindingAdapter("QueenBeeAgeManagement")
 fun TextView.setQueenBeeAge(item: Beehive?){
     item?.let {
-        text = item.queenBeeYear.toString()
+        text = "QueenBee Year: " + item.queenBeeYear.toString()
     }
 }
 
 @BindingAdapter("QueenBeeConditionManagement")
 fun TextView.setQuennBeeCondition(item: Beehive?){
     item?.let {
-        text = convertNumericQualityToString(item.queenBeeState,context.resources)
+        text = "Condition: " + convertNumericQualityToString(item.queenBeeState,context.resources)
     }
 }

@@ -96,6 +96,9 @@ class BeehiveReviewFragment: Fragment() {
                             this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToSickBees(
                                 arguments.beegroupKey))
                         }
+                        if (it==5){
+                            this.findNavController().navigate(BeehiveReviewFragmentDirections.actionBeehiveReviewFragmentToSwarmingBees(arguments.beegroupKey))
+                        }
                             beehiveReviewViewModel.doneNavigating()
                         }
                     else{

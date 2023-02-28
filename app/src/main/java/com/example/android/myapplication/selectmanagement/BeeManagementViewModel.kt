@@ -11,6 +11,7 @@ class BeeManagementViewModel(private val groupKey: Long,
     private val _navigateToQueenBeeManagementFragment = MutableLiveData<Boolean?>()
     private val _navigateToBroodFrameBalancingFragment = MutableLiveData<Boolean?>()
     private val _navigateToHoneyFrameBalancingFragment = MutableLiveData<Boolean?>()
+    private val _navigateToSwarmingBeesFragment = MutableLiveData<Boolean?>()
     private val _navigateToSickBeesFragment = MutableLiveData<Boolean?>()
     private val _navigateToBeeStatisticsFragment = MutableLiveData<Boolean?>()
     private val _navigateToSelectGroupFragment = MutableLiveData<Boolean?>()
@@ -24,6 +25,9 @@ class BeeManagementViewModel(private val groupKey: Long,
 
     val navigateToHoneyFrameBalancingFragment: LiveData<Boolean?>
         get() = _navigateToHoneyFrameBalancingFragment
+
+    val navigateToSwarmingBeesFragment: LiveData<Boolean?>
+        get() = _navigateToSwarmingBeesFragment
 
     val navigateToSickBeesFragment: LiveData<Boolean?>
         get() = _navigateToSickBeesFragment
@@ -58,12 +62,12 @@ class BeeManagementViewModel(private val groupKey: Long,
         _navigateToHoneyFrameBalancingFragment.value=null
     }
 
-    fun clickOnStatisticsButton(){
-        _navigateToBeeStatisticsFragment.value=true
+    fun clickOnSwarmingBeesButton(){
+        _navigateToSwarmingBeesFragment.value=true
     }
 
-    fun doneNavigatingToBeeStatisticsFragment(){
-        _navigateToBeeStatisticsFragment.value=null
+    fun doneNavigateToSwarmingBeesFragment(){
+        _navigateToSwarmingBeesFragment.value=null
     }
 
     fun clickOnSickBeesButton(){
@@ -72,6 +76,14 @@ class BeeManagementViewModel(private val groupKey: Long,
 
     fun doneNavigatingToSickBeesFragment(){
         _navigateToSickBeesFragment.value=null
+    }
+
+    fun clickOnStatisticsButton(){
+        _navigateToBeeStatisticsFragment.value=true
+    }
+
+    fun doneNavigatingToBeeStatisticsFragment(){
+        _navigateToBeeStatisticsFragment.value=null
     }
 
     fun clickOnCloseButton(){
